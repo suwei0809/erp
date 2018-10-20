@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sw.erp.tourist.mapper.TouristMapper">
+    <insert id="addTourist" parameterType="com.sw.erp.tourist.model.Tourist">
+        INSERT INTO T_TOURIST (TOURIST_ID, TOURIST_NAME, TOURIST_PASS)
+        VALUES (SEQ_TOURIST.nextval,#{touristName},#{touristPass})
+    </insert>
+</mapper>

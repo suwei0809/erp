@@ -1,0 +1,84 @@
+html,
+body {
+  background: #f2f2f2;
+}
+.bbd {
+  border-bottom: 1px solid #d9d9d9;
+}
+.bb {
+  border: 1px solid red;
+  color:red;
+}
+.bb9 {
+  border: 1px solid #999;
+}
+.dlbtn {
+  padding: 8px 15px;
+}
+.sumbit {
+  background: #000000;
+  margin-left: 136px;
+}
+.bad {
+  border: 1px solid #999;
+}
+.getcode {
+  background: #000;
+}
+.error {
+  margin-left: 76px;
+}
+.bbl {
+  border-left: 1px solid #f2f2f2;
+}
+.fileinput {
+  position: relative;
+  display: inline-block;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 4px 12px;
+  overflow: hidden;
+  color: #fff;
+  text-decoration: none;
+  text-indent: 0;
+  line-height: 20px;
+}
+.fileinput input {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+input {
+  padding-left: 10px !important;
+  outline: none;
+}
+.pl0 {
+  padding-left: 0 !important;
+}
+.follow-list {
+  width: 396px;
+  float: right;
+  overflow: hidden;
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+}
+.follow-list .list-item {
+  width: 85px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.registerForm{
+  border: slategray 1px ;
+  align-content: center;
+
+
+}

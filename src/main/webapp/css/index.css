@@ -1,0 +1,253 @@
+
+@charset "utf-8";
+html,body,ul,li,ol,dl,dd,dt,table,tbody,thead,tr,td,p,h1,h2,h3,h4,h5,h6,form,img,button,select,option,textarea {
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
+}
+button:active, button:hover, bottom:focus {
+  outline: none;
+}
+img {
+  border: none;
+  vertical-align: center;
+}
+address,code,th {
+  font-style: normal;
+  font-weight: normal;
+}
+body, html{background: #f2f2f2;}
+a{text-decoration: none;}
+ul,li,dt,dd{list-style: none;}
+.h_top, .h_conter, .h_bottom ,.footer,.banner,.map{width: 100%;min-width: 1200px;font-family: "微软雅黑";font-size: 12px;}
+.layout, .main{width: 1200px;margin: 0 auto;height: 100%;}
+@font-face {
+	font-family:abg;
+	src: url('http://iotekcdn.b0.upaiyun.com/php/index/font/Akzidenz Grotesk-Light Extended.otf');
+}
+
+/*头部的上部*/
+.h_top{height: 30px;line-height: 30px;background: #f2f2f2;float: left;}
+.h_top .h_top_l{float: left;}
+.h_top .h_top_l li{color: #7c7c7c;padding-right: 12px;float: left;}
+.h_top .h_top_l li a{color: #7c7c7c;}
+.h_top .h_top_l li + li{padding-left: 20px;position: relative;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_01.png) no-repeat right 11px;}
+.h_top .h_top_l li p{position: absolute;left: 0;top: 30px;display: none;width: 240px;background: #fff;border: 1px #eee solid;z-index:4;} 
+.h_top .h_top_l li+li+li p{width: 160px;} 
+.h_top .h_top_l li p a{display: block;float: left;width: 65px;height: 30px;line-height: 30px;text-align: left;padding-left: 15px;} 
+.h_top .h_top_l li + li:hover{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_02.png) no-repeat right 11px;}
+.h_top .h_top_l li + li:hover > a{color: #000;}
+.h_top .h_top_l li + li:hover p{display: block;}
+.h_top .h_top_l li p a:hover{color: #000;}
+.h_top .h_top_r{float: right;}
+.h_top .h_top_r li{padding: 0 13px 0 10px;display: inline-block;color: #7c7c7c;overflow: hidden;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_s.png) no-repeat right 8px;}
+.h_top .h_top_r li a{color: #7c7c7c;padding: 7px 0;}
+.h_top .h_top_r li:hover a{color: #000;}
+.h_top .h_top_r li:first-child a{color: #e10030;}
+.h_top .h_top_r li:first-child a + a{color: #7c7c7c;}
+.h_top .h_top_r li:nth-child(1) a{color: #e10030;}
+.h_top .h_top_r li:nth-child(1) a + a{color: #7c7c7c;}
+.h_top .h_top_r .h_top_icon {background: none;padding-right:0px; overflow: visible;}
+.h_top .h_top_r .h_top_icon a{padding: 15px 15px;float: left;position: relative;}
+.h_top .h_top_r .h_top_icon a span{position: absolute;right:0;top:30px;width: 88px;z-index: 5;height: 105px;background:#fff;border: 1px #000 solid;display: none;}
+.h_top .h_top_r .h_top_icon a span img{width: 100%;overflow: hidden;line-height: 0;font-size: 0;}
+.h_top .h_top_r .h_top_icon a span em{display: block;text-align: center;font-style: normal;position: absolute;top: 80px;left: 8px;}
+.h_top .h_top_r li .h_top_app{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_i.png) no-repeat -22px -3px;}
+.h_top .h_top_r li .h_top_i{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_i.png) no-repeat -97px -3px;}
+.h_top .h_top_r li .h_top_q{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_i.png) no-repeat -173px -2px;}
+.h_top .h_top_r li .h_top_w{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_i.png) no-repeat -246px -2px;}
+.h_top .h_top_r .h_top_icon a:hover{background-position-y: -40px;}
+.h_top .h_top_r li a:hover span{display: block;}
+
+/*头部的中间*/
+.h_conter{height: 88px; float: left;background: #fff;}
+.h_conter .h_conter_l{float: left; line-height: 88px;}
+.h_conter .h_conter_l a{float: left;}
+.h_conter .h_conter_l img{padding: 26px 60px 26px 0;}
+.h_conter .h_conter_l span{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_x.png) no-repeat center left;cursor: pointer;position: relative;width: 100px;height: 20px;float: left;line-height: 20px;padding-left: 15px;top: 34px;}
+.h_conter .h_conter_l span div{position: absolute;width: 225px;height: 148px;border: 1px solid #e4e4e4;padding: 10px 0 0 15px;z-index: 3;background: #fff;display: none;}
+.h_conter .h_conter_l span div a{width: 45px;height: 20px;line-height: 20px;color: #999;}
+.h_conter .h_conter_l span:hover div{display: block;}
+.h_conter .h_conter_r{float: right; padding: 28px 0;}
+.h_conter .h_conter_r input{width: 259px;height: 30px;text-indent:10px;border:1px solid #e1e1e1;color: #ababab;line-height: 30px;float: left;outline:none;}
+.h_conter .h_conter_r span{display:inline-block;width: 32px;height: 32px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_ss.png);margin-right: 21px;}
+.h_conter .h_conter_r a{display:inline-block;width: 166px;height: 32px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_c.png) no-repeat center;padding: 0 5px;}
+
+
+/*头部的底部*/
+.h_bottom{height: 55px;background: #fff;border-top: 1px solid #e4e4e4;position: relative;font-size: 16px;float:left;}
+.h_bottom span{ position:absolute;width: 225px;top: -1px;height: 56px;line-height: 55px;background: #e10030 url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_sy.png) no-repeat 20px center;color: #fff;padding-left: 45px;}
+.h_bottom a{font-size: 14px;color: #000;width: 270px;height: 56px;line-height: 55px;text-align: center;overflow: hidden;display: inline-block;}
+.h_bottom a + a{width: 98px;}
+.h_bottom a:hover{color:#f00;}
+
+
+/*清除头部浮动*/
+.header:after{display:block;clear:both;content:"";visibility:hidden;height:0} 
+.header{zoom: 1;}
+
+/*banner*/
+.banner{height: 434px;position: relative;}
+.banner .banner_b{width: 100%;height: 100%;position: relative;left: 0;right: 0;}
+.banner .banner_b a{position: absolute;width: 100%;height: 100%;left: 0;right: 0;background-repeat: no-repeat;background-position: center;opacity: 1;display: block;}
+.banner .banner_b a + a{opacity: 0;display: none;}
+.banner .banner_b p{position: absolute;width:250px;height: 7px;margin: 0 auto;left: 0;right: 0;bottom: 40px;z-index: 3;}
+.banner .banner_b p span{float: left;width: 20px;height: 5px;border: 1px rgba(255, 255, 255, 0.5) solid;border-radius: 2.5px;margin: 0 4px;cursor: pointer;}
+.banner .banner_b p .active{background: #f00;border-color: #f00;}
+.banner ul{position: absolute;margin:0 auto;left: 0;right:0;width: 1200px;height: 434px;top: 0;}
+.banner ul li{width: 250px;height: 67px;color:#999; padding: 19px 0 0 20px;;background:rgba(0, 0, 0, 0.7);position: relative;z-index: 3;}
+.banner ul li + li{border-top: 1px solid rgba(255, 255, 255, 0.5);}
+.banner ul li div{margin-bottom: 8px;}
+.banner ul li div a{font-size:16px;color:#fff; margin-right: 8px;}
+.banner ul li p a{color:#999; padding-right: 5px;}
+.banner ul li p a + a{color:#999; background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_s.png) no-repeat left 2px; padding-left:8px;}
+.banner ul li a:hover{color:#f00;}
+
+/*内容*/
+.icon{width: 100%;height: 118px;background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_b.png) no-repeat center;}
+
+/*培训课程和公开课*/
+.course{width: 100%;height: 700px;background:url(http://iotekcdn.b0.upaiyun.com/php/index/img/course.png) no-repeat center 45px;padding-top: 100px;}
+.course div{width: 1150px;height: 295px;padding: 25px;margin-bottom: 17px;background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/course_b01.png) no-repeat 24px 25px;}
+.course div + div{background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/course_b02.png) no-repeat 24px 25px; height: 280px;}
+.course div p{float: right; }
+.course div p span{display: inline-block; width: 16px;height: 16px;border: 1px solid #999;color: #999;border-radius:2px;line-height: 12px;text-align: center;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.course div p span:hover{color: #f00;}
+.course div ul{padding-top: 22px;width: 1150px;height: 300px;overflow: hidden;}
+.course div ul li{width: 265px;height: 300px;position: relative;font-size: 12px;float: left;}
+.course div ul li + li{margin-left: 30px;}
+.course div ul li .course_b{display: block;width: 100%;height: 163px;background-size: 100%;background-position:center ;background-repeat: no-repeat;transition: all 0.5s;}
+.course div ul li:hover .course_b{background-size: 115%;}
+.course div ul li .course_t{position: absolute;width: 100%;top: 185px;color: #999;}
+.course div ul li .course_t h6{font-size: 14px;color: #000;font-weight: 100;margin-bottom: 3px;height: 40px;}
+.course div ul li .course_l{position: absolute;width: 70px;height: 30px;text-align: center;line-height: 30px;background: #000;color:#fff;top: 222px;right: 0;}
+.course div + div > p{background:url(http://iotekcdn.b0.upaiyun.com/php/index/img/more.png) no-repeat center;width: 47px;height: 16px;cursor:pointer;}
+.course div ul li h5{position: absolute;width: 90%;top: 220px; color: #999;margin-left: 3%;font-weight: 100;}
+.course div .course_span span{padding-left:20px ;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_time.png) no-repeat left center;}
+.course div .course_span p a{color: #f00;}
+
+/*精品培训课程*/
+.train {width: 100%;height: 640px;background:url(http://iotekcdn.b0.upaiyun.com/php/index/img/train.png) no-repeat center 45px;padding-top: 100px;}
+.train div{width: 1150px;background:#fff; padding: 25px 25px 0 25px;}
+.train div span{margin-right: 30px; font-size: 14px;color: #999;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.train div .active{font-size: 18px;color: #000;border-bottom: 3px #e10030 solid;}
+.train div p{background:url(http://iotekcdn.b0.upaiyun.com/php/index/img/more.png) no-repeat center;width: 47px;height: 16px;float: right;cursor:pointer;}
+.train ul{width: 1150px;height: 531px;background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/train_b.png) no-repeat 24px 3px;padding: 25px 25px; display: none;}
+.train ul li{width: 265px;height: 270px;position: relative;font-size: 12px;float: left;margin-bottom: 20px;}
+.train ul li:first-child+li+li+li+li{margin-left: 0;}
+.train ul li:nth-child(5){margin-left: 0;}
+.train ul li + li{margin-left: 30px;}
+.train ul li .course_b{display: block;width: 100%;height: 163px;background-size: 100%;background-position:center ;background-repeat: no-repeat;transition: all 0.5s;}
+.train ul li:hover .course_b{background-size: 115%;}
+.train ul li .course_t{position: absolute;width: 100%;top: 185px;font-size: 14px;color: #000;}
+.train ul li .course_gl{position: absolute;width: 100%;top: 220px; color: #999;}
+.train ul li .course_gl p{float: right;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_time.png) no-repeat  0px center; padding-left: 15px;}
+.train ul li .course_gl span{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_people.png) no-repeat  0px center; padding-left: 15px;}
+.train .bigdata{display: block;}
+
+/*企业需求*/
+.enterprise {width: 100%;height: 360px;background:url(http://iotekcdn.b0.upaiyun.com/php/index/img/enterprise.png) no-repeat center 45px;padding-top: 100px;}
+.enterprise div{float: left;width: 366px;height: 199px;background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/enterprise_01.png) no-repeat 10px 30px;padding: 135px 0 0 27px;}
+.enterprise p{float: left;width: 90px;height: 208px;background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/enterprise_02.png) no-repeat -4px -2px;margin: 0 10px;padding: 125px 0 0 303px;}
+.enterprise p + div{background:#fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/enterprise_03.png) no-repeat 0px -1px;}
+.enterprise a{display: inline-block;width: 60px;height: 28px;color: #a1a1a1;border: 1px #a1a1a1 solid;text-align: center;line-height: 28px;font-size: 12px;margin:0 125px 100px 0;}
+.enterprise a:hover{color: #f00;border: 1px #f00 solid;}
+.enterprise div a:nth-child(2n){margin-right:50px;}
+.enterprise div a:nth-child(2n){margin-right:50px;}
+
+/*用数据说话*/
+.data{width: 1150px;height: 83px;background: #fff url(http://iotekcdn.b0.upaiyun.com/php/index/img/data.png) no-repeat center;padding: 80px 25px 0 25px;}
+.data p{float: left;width: 215px;height: 80px;font-family: abg;font-size: 24px;color: #505050;text-align: center;}
+.data p + p{width: 240px;}
+.data p:nth-child(5){width: 215px;}
+.data span{font-size: 36px;}
+
+/*讲师团队*/
+.teacher{width: 1200px;height: 470px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/teacher.png) no-repeat center 45px;padding-top: 105px;position: relative;}
+.teacher ul{display: none;}
+.teacher > .active{display: block;}
+.teacher li{float: left;width: 240px;height: 235px;position: relative;overflow: hidden;}
+.teacher li a{display: block;width: 100%;height: 100%;}
+.teacher li img{width: 100%;height: 100%;}
+.teacher li div{position: absolute;width: 190px;height: 175px;bottom: -235px;left: 0px;padding: 30px 25px;transition: all 0.5s; background: rgba(225, 0, 48, 0.9);color: #fff;}
+.teacher li div h6{font-size: 18px;font-weight: 100;margin-bottom:20px; }
+.teacher li div span{font-size: 14px;line-height: 18px; }
+.teacher li:hover div{bottom: 0;}
+.teacher p{position: absolute;margin: 0 auto;left: 0;right: 0;top: 340px;width: 240px;height: 235px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/teacher_b.jpg) no-repeat center;}
+.teacher p span{float: left;width: 50%;height:70px;line-height: 70px;text-align: center;color: #fff;font-size: 14px;background: rgba(255, 255, 255, 0.1);cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.teacher p span:hover{background: rgba(225, 0, 48, 0.9);}
+.teacher p .active{background: rgba(225, 0, 48, 0.9);}
+
+/*学员*/
+.student{width: 1200px;height: 685px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/student.png) no-repeat center 45px;padding-top: 105px;position: relative;display:none;}
+.student li{float: left;width: 286px;height: 208px;margin-right: 18px;margin-bottom: 25px;}
+.student li:nth-child(4n){margin-right: 0;}
+.student li a{width: 286px;height: 208px;position: relative;overflow: hidden;float: left;}
+.student li img{width: 100%;height: 100%;}
+.student li a > p{width: 100%;height: 48px;background: rgba(0,0,0,0.8);position: absolute;top: 160px;line-height: 48px;text-align: center;font-size: 14px;color: #fff;z-index: 2;}
+.student li a div{position: absolute;width: 100%;height: 100px;bottom: -190px;left: 0px;padding-top: 60px;transition: all 0.5s; background: rgba(28, 28, 31, 0.8);color: #fff;text-align: center;}
+.student li a div span{display: block;font-size: 18px;}
+.student li a div span + span{font-size: 16px;margin-top: 15px;}
+.student li a div p{font-size: 24px;}
+.student li:hover div{bottom: 48px;}
+
+
+/*毕业直通企业*/
+.graduation{width: 1200px;height: 385px;background:#f2f2f2 url(http://iotekcdn.b0.upaiyun.com/php/index/img/graduation.png) no-repeat center 45px;padding-top: 155px;}
+.graduation img{float: left;}
+.graduation div{float: left;background:#fff;height: 55px;width: 1200px;margin: 0 auto;margin-top: 15px;}
+.graduation div p{float: left;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_new.png) no-repeat right center;}
+.graduation div p + p{margin-left: 45px;}
+.graduation div p a{display: inline-block;height:55px;margin:0 43px 0 15px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_dian.png) no-repeat left center;font-size: 14px;line-height: 55px;padding-left: 10px;color: #000;}
+
+/*企业荣誉表彰*/
+.honor{width: 1150px;height: 510px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/honor_b.png) no-repeat center 45px;padding: 120px 25px 0 25px;}
+.honor div{width: 1100px;height: 185px;padding: 0 25px; overflow: hidden;position: relative;}
+.honor span{position: absolute;height: 60px;width: 60px;top: 40px;left: 0px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/honor.png) no-repeat -22px center;}
+.honor span + span{left: 1090px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/honor.png) no-repeat -125px center;}
+.honor ul{width: 6300px;height: 185px;position: absolute;left: 25px;top: 0px;}
+.honor li{float: left;width: 200px;margin-right: 25px;}
+.honor li img{width: 100%;margin-bottom: 15px;}
+.honor li p{width: 100%;text-align: center;font-size: 12px;}
+.honor > p{margin-top: 100px;}
+.honor > p img{float: left;}
+
+/*官方合作*/
+.cooperation{width: 1200px;height: 190px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/cooperation.png) no-repeat center 45px;margin-bottom: 10px;padding-top: 120px;}
+.cooperation img{float: left;}
+
+/*友情连接*/
+.link{width: 1075px;background: #fff;position: relative;padding: 15px 45px 20px 80px;overflow: hidden;}
+.link p{position: absolute;font-size: 14px;left: 25px;top: 20px;color: #000;}
+.link a{float: left;font-size: 12px;color: #999;padding:5px 15px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon_s.png) no-repeat right center;}
+.link a:last-child{background: none;}
+.link a:hover{color:#f00;}
+
+/*网站地图*/
+.map{background:#000 url(http://iotekcdn.b0.upaiyun.com/php/index/img/map.png) no-repeat center 35px;height: 250px;}
+.map .map_l{float: left;height: 190px;width: 665px;padding-top: 75px;position: relative;}
+.map p{position: absolute;font-size: 15px;color: #fff;top: 40px;}
+.map p span{padding-right: 255px;}
+.map p span + span{padding-right: 100px;}
+.map .map_l div{float: left;width: 60px;padding-right: 106px;}
+.map .map_l a{display:block;font-size:12px;color:#999;margin-bottom: 11px;}
+.map .map_l a:hover{color:#f00;}
+.map .map_r{float: right;height: 190px;width: 400px;padding-top: 75px;position: relative;}
+.map .map_r p{width: 400px;background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/tel.png) no-repeat right center;}
+.map .map_r .map_rl{float: left;width: 120px;}
+.map .map_r a{display:block;width: 75px;height:20px;margin-bottom: 7px;background-image: url(http://iotekcdn.b0.upaiyun.com/php/index/img/icon.png);}
+.map .map_r .weixin{background-position-y: -28px;}
+.map .map_r .qq{background-position-y: 45px;}
+.map .map_r .tel{background-position-y: 20px;}
+.map .map_r .map_rl a:hover{background-position-x: 75px;}
+.map .map_r div + div{float:right;width: 235px;}
+.map .map_r div + div a{float:left;width: 109px;height: 131px; background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/dyh.png) no-repeat center;}
+.map .map_r div + div a + a{background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/app.png) no-repeat center;margin-left: 15px;}
+
+
+/*底部*/
+.footer{height: 100px;background: #000;color: #999;padding-top: 36px;text-align: center;}
+.footer > a{display:block; background: url(http://iotekcdn.b0.upaiyun.com/php/index/img/beian.png) no-repeat center left;height: 30px;line-height: 30px;width: 235px; margin: 0 auto;color:#999;}
+.footer p a{color: #999;}
