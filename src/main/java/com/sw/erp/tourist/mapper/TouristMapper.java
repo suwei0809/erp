@@ -8,5 +8,7 @@ import org.springframework.stereotype.Repository;
 public interface TouristMapper {
 
     boolean addTourist(Tourist tourist);
+    Tourist getTourist(Tourist tourist);
+
 
 }

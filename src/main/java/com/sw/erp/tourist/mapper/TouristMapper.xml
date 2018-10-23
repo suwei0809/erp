@@ -7,4 +7,18 @@
         INSERT INTO T_TOURIST (TOURIST_ID, TOURIST_NAME, TOURIST_PASS)
         VALUES (SEQ_TOURIST.nextval,#{touristName},#{touristPass})
     </insert>
+    <select id="getTourist" parameterType="com.sw.erp.tourist.model.Tourist" resultType="com.sw.erp.tourist.model.Tourist">
+        SELECT
+          TOURIST_ID AS touristId,
+          TOURIST_NAME AS touristName,
+          TOURIST_PASS AS touristPass
+        FROM  T_TOURIST T
+        <where>
+            <if test="touristName != null and touristPass!=null">
+                AND TOURIST_NAME=#{touristName}
+                and TOURIST_PASS=#{touristPass}
+            </if>
+        </where>
+
+    </select>
 </mapper>

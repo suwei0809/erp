@@ -14,5 +14,11 @@ mybatis:
   mapper-locations: classpath*:com/sw/erp/tourist/mapper/*.xml
   type-aliases-package: com.sw.erp.tourist.model
 
+# 打印sql
+logging:
+  level:
+    com.onepro.custom.mapper: DEBUG
+
+
 
 

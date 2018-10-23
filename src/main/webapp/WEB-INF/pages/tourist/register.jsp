@@ -22,26 +22,26 @@
     <div class="wp920 ma pt30">
         <div class="fs20 bbd h30 tac w100 cb">
             <span class="fl fsl4">学员注册</span>
-            <span class="c9 fr fs">已有学员账号，直接<span class="c6"><a href="http://pass.zhizuobiao.com/">登录&gt;&gt;</a></span></span>
+            <span class="c9 fr fs">已有账号，直接<span class="c6"><a href="loginPage">登录&gt;&gt;</a></span></span>
         </div>
         <div class="w100 cb mt20">
             <div class="wp350">
-                <form action="http://pass.zhizuobiao.com/register/" method="post" name="registerForm" class="registerForm" >
+                <form name="registerForm" class="registerForm" >
                     <input type="hidden" name="registerType" value="1">
                     <div class="h20 wp350 cb">
-                        <input type="tel" name="mobile" maxlength="11" placeholder="请输入账号" value="" class="wp350 db h30 ma">
+                        <input type="tel" name="mobile" id="name" maxlength="11" placeholder="请输入账号" value="" class="wp350 db h30 ma">
                     </div>
                     <div class="h20 wp350 cb">
                         <span class="ce1" id="mobile"></span>
                     </div>
                     <div class="h20 wp350 cb">
-                        <input type="password" name="code" maxlength="6" placeholder="请输入密码" class="wp350 db h30 ma">
+                        <input type="password" name="code" id="pass" maxlength="6" placeholder="请输入密码" class="wp350 db h30 ma">
                     </div>
                     <div class="h20 wp350 cb">
                         <span class="ce1" id="code"></span>
                     </div>
                     <div class="h20 wp350 cb">
-                        <input type="password" name="password" maxlength="16" placeholder="请确认账号密码" class="wp350 db h30 ma">
+                        <input type="password" name="password" id="passA" maxlength="16" placeholder="请确认账号密码" class="wp350 db h30 ma">
                     </div>
                     <div class="h20 wp350 cb">
                         <span class="ce1" id="password"></span>
@@ -61,10 +61,20 @@
     $(function () {
         
         $("#userRegister").click(function () {
-            
+            $.ajax({
+                type:"post",
+                url:"addTourist",
+                data:{
+                    "name": $("#name").val(),
+                    "password":$("#pass").val(),
+                },
+                success:function (data) {
+                    if (data==200){
+                        window.location.href ="loginPage"
+                    }
+                }
+            })
         })
-        
-        
         
     })
     

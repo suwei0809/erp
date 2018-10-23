@@ -1,0 +1,913 @@
+/*-------------------------*\
+	ÑùÊ½ÖØÖÃ
+\*-------------------------*/
+html,body,p,form,ul,hr,h1,h2,h3,h4,h5,h6,td{margin:0;padding:0}
+body,a,li,input,button,textarea{font-family:"microsoft yahei" !important}
+a{text-decoration:none}
+li{list-style:none}
+img{border:0 none}
+textarea{line-height:20px}
+input,button,textarea{font-size:14px;outline:0 none;margin:0;padding:0}
+input::-ms-clear{display:none}
+h1,i,em,h2,h3,h4,h5,h6{font-weight:normal}
+table{border-collapse:collapse}
+body{line-height:20px;font-size:14px;background-color:#fff}
+/*-------------------------*\
+	¹¦ÄÜÀà¶¨Òå
+\*-------------------------*/
+/*	Çå³ý¸¡¶¯	*/
+.clearfix{*zoom:1}
+.clearfix:before,.clearfix:after{display:table;content:"";clear:both}
+.cf:before,.dys_item:before, .cf:after,.dys_item:after{display:table;content:""}
+.cf:after,.dys_item:after{clear:both;overflow:hidden}
+.cf,.dys_item{zoom:1}
+/*	ÑÕÉ«¶¨Òå	*/
+.c_blue2{color:#00457d}
+.c_green{color:#3cbe7f}
+.c_orange2{color:#fa6666}
+.c_888 {color:#888 !important}
+/*	¸¡¶¯	*/
+.r {float:right}
+.l {float:left}
+/*	ÎÄ×ÖÒç³öellipsis	*/
+.at,
+	.dys_item li,.emsg .e label,.emsg .e p,.emsg .h1 a,.sbox .s .rol1,.sbox .s .rol1.ft font,
+	.warn .e.e2,.order_items li,.order_item_det li,.mc_tb .cartr2 td,.mserver_item li,.cartr2 li,
+	.dw_table .t1 a,.dw_table .t2 a,.dw_table .t3,.dw_table .t4,.dw_table .t6 a,.dw_table .t7 a,.dw_table .t9 span,.dw_table .t10 a,.dw_table .t12 a,.dw_table .t13 a,.dw_table .t14 a,.dw_table .t15,.dw_table .t18,
+	.rview .rli .h1 a,.eul a,.rview .rli .r1, .rview .rli .r2,
+	.spt li,.situ .s_icon,.stati .lt,
+	.apply .lf .p1,.apply .lf .p2,.apply .lf .p3,
+	.lmsg .cname,.lmsg .pname,.lmsg .e .l1 a,.lmsg .e .l1 span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/*-------------------------*\
+	Ò³ÃæÑùÊ½
+\*-------------------------*/
+.nd{border:none}
+.mt15{margin-top:15px}
+.err{display:block;line-height:18px !important;font-size:12px;color:#ff6000;clear:both;padding:5px 0 0 18px;background:url(//img01.51jobcdn.com/im/2016/form/error.png) 0 7px no-repeat;#background-position:0 5px}
+
+.dicon{background:url(//img01.51jobcdn.com/im/jobs/list_icon_dw.png) no-repeat}
+
+.rbox{text-align:center}
+.rbox .rsp{height:24px;line-height:24px;font-size:12px;color:#7c8ea7;margin:8px 15px 0;padding-left:10px;background-color:#f3f9ff}
+.rbox .tit{height:30px;line-height:30px;font-size:12px;color:#999;background-color:#fafafa;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.rbox ul{padding:0 15px}
+.rbox .rsp ul{padding:0}
+.rbox li{float:left;margin-left:20px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rbox li:first-child{margin-left:0}
+.rbox .tit li{overflow:visible}
+.rbox .rli{min-height:24px;line-height:24px;font-size:14px;color:#999;padding:8px 0;background-color:#fff;border-bottom:1px solid #eee}
+.rbox .rli.ek .selt{z-index:2}
+.rbox .rli.ek .ul{display:block}
+.rbox .rbg{background-color:#fafafa}
+.rbox .l1{width:200px}
+.rbox .l2{width:160px}
+.rbox .l3{width:212px}
+.rbox .l4{width:180px}
+.rbox .l5{width:182px}
+.rbox .l6{width:100px}
+.rbox .l7{width:150px;font-size:12px}
+.rbox .l8{width:170px}
+.rbox .l9{width:220px}
+.rbox .l10{width:110px}
+.rbox .l11{width:102px}
+.rbox .l12{width:150px}
+.rbox .l13,.rbox .l14{width:250px}
+.rbox .l15{width:192px}
+.rbox .l16{width:75px;text-align:left}
+.rbox .l17{width:270px;text-align:left}
+.rbox .l18,.rbox .l19{width:222px;text-align:left}
+.rbox .l18{width:175px}
+.rbox .l18 .pgs{width:120px}
+.rbox .l18 .bar{width:110px}
+.rbox .l19{margin-left:15px}
+.rbox .l19,.rbox .l20{text-align:center}
+.rbox .l20{width:102px}
+.rbox .l18 .hpBox,.rbox .l20 .hpBox{display:inline-block;#display:inline;vertical-align:middle;margin-top:-2px;#zoom:1}
+.rbox .l3 .a,.rbox .l15 .a{font-size:12px}
+.rbox .rli .l1 a,.rbox .rli .l4 a,.rbox .rli .l13 a{font-size:16px;color:#333}
+.rbox .rli .l17,
+	.rbox .rli .l1 a:link,.rbox .rli .l1 a:visited,.rbox .rli .l1 a:active,
+	.rbox .rli .l4 a:link,.rbox .rli .l4 a:visited,.rbox .rli .l4 a:active,
+	.rbox .rli .l13 a:link,.rbox .rli .l13 a:visited,.rbox .rli .l13 a:active{color:#333}
+.rbox .rli .l9 a,.rbox .rli .l2,.rbox .rli .l14 a,.rbox .rli .l5 a,.rbox .rli .l16,.rbox .rli .l18,.rbox .rli .l19,.rbox .rli .l20,
+	.rbox .rli .l5 a:link,.rbox .rli .l5 a:visited,.rbox .rli .l5 a:active,
+	.rbox .rli .l9 a:link,.rbox .rli .l9 a:visited,.rbox .rli .l9 a:active,
+	.rbox .rli .l14 a:link,.rbox .rli .l14 a:visited,.rbox .rli .l14 a:active{font-size:14px;color:#666}
+.rbox .rli .l4,.rbox .rli .l5,.rbox .rli .l9,.rbox .rli .l13,.rbox .rli .l14,.rbox .rsp .l7,.rbox .rsp .l8,.rbox .rsp .l12{text-align:left}
+.rbox .rli .l1 a:hover,.rbox .rli .l4 a:hover,.rbox .rli .l5 a:hover,.rbox .rli .l9 a:hover,.rbox .rli .l13 a:hover,.rbox .rli .l14 a:hover{color:#ff6000}
+.rbox .rli .l4 a,.rbox .rli .l5 a,.rbox .rli .l9 a,.rbox .rli .l13 a{float:left;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rbox .rli .l1 a{display:inline-block;max-width:200px;vertical-align:middle;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rbox .rsp .c_green,.rbox .rli .l19,.rbox .rli .l20{font-weight:bold}
+.rbox .rli .l20 span{color:#fa6666}
+.rbox .rli .l17{text-overflow:clip;white-space:normal;word-wrap:break-word}
+.rbox .rli .l17 span{float:left;white-space:nowrap}
+.rbox .arr{float:left;width:10px;height:24px;vertical-align:top;margin-left:5px;background:url(//img01.51jobcdn.com/im/2017/my/ns.png) 0 -88px no-repeat}
+.rbox .open,.rbox .off{display:block;width:55px;height:24px;margin:0 auto;cursor:pointer;background:url(//img01.51jobcdn.com/im/2017/my/ns2.png) 0 -8px no-repeat}
+.rbox .off{background-position:0 -48px}
+.rbox .rli .selt{position:relative;height:24px;font-size:12px;cursor:pointer;overflow:visible}
+.rbox .selt .sval{float:left;width:104px;text-align:right}
+.rbox .selt .ul{position:absolute;display:none;width:100px;top:28px;left:50%;margin-left:-50px;background-color:#fff;border:1px solid #ddd;box-shadow:0 0 5px #ddd;z-index:2}
+.rbox .selt .ul .li{float:left;width:100px;height:30px;line-height:30px;color:#333;text-align:left;text-indent:5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rbox .selt .ul .li.on{color:#fff;background-color:#ff9f20}
+.rbox .selt .ul .li:hover{color:#333;background-color:#eee}
+.rbox .phone{position:relative;padding-right:20px}
+.rbox .phone em{position:absolute;width:20px;height:20px;top:3px;background:url(//img01.51jobcdn.com/im/2017/my/ns.png) -24px -90px no-repeat}
+.rbox .dt{position:relative;padding-right:35px}
+.rbox .dt em{position:absolute;width:30px;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;text-align:center;top:3px;margin-left:5px;background-color:#5591d5;
+	-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px}
+.rbox .dt.l1{width:165px}
+.rbox .dt.l1 a{max-width:165px}
+.rbox .dt.l4{width:145px}
+.rbox .phone.l4{width:160px}
+.rbox .phone.l13{width:230px}
+.rbox .view{float:left;width:100px;height:22px;line-height:22px;font-size:14px;color:#3cbe7f;text-align:center;cursor:pointer;background-color:#fff;border:1px solid #3cbe7f}
+.rbox .view em,.rbox .rate .e em,.rbox .rate .rtit i{background:url(//img01.51jobcdn.com/im/2017/my/icon_rate.png) no-repeat}
+.rbox .view em{display:inline-block;width:14px;height:14px;vertical-align:middle;margin:-2px 0 0 4px;background-position:-30px -91px}
+.rbox .view:hover{color:#259c62;border-color:#259c62}
+.rbox .view:hover em{background-position:-30px -106px}
+.rbox .view.on em{background-position:0 -91px}
+.rbox .view.on:hover em{background-position:0 -106px}
+.rbox .rate{font-size:12px;color:#999;overflow:hidden;padding:25px 42px 10px}
+.rbox .rate .e{position:relative;float:left;width:126px;text-align:center;margin-left:27px}
+.rbox .rate .e:first-child{margin-left:0}
+.rbox .rate .e em{display:block;width:64px;height:28px;line-height:28px;font-size:14px;font-style:normal;color:#fff;margin:0 auto 5px;background-position:0 -30px}
+.rbox .rate .e .h{position:absolute;width:68px;height:2px;top:12px;left:-48px;background-color:#d0d0d0}
+.rbox .rate .e .rtit{color:#999}
+.rbox .rate .e .rtit i{display:none;width:6px;height:24px;margin-right:6px;vertical-align:top;*vertical-align:middle;background-position:-58px -86px}
+.rbox .rate .e.now em{background-position:0 0}
+.rbox .rate .e.now .rtit,.rbox .rate .e.out .rtit{color:#666}
+.rbox .rate .e.now .rtit i,.rbox .rate .e.out .rtit i{display:inline-block}
+.rbox .rate .e.now .h,.rbox .rate .e.pre .h{background-color:#ff9f20}
+.rbox .rate .e.pre em{background-position:0 0}
+.rbox .rate .e.out em{background-position:0 -60px}
+.rbox .rate .e.out .h{background-color:#808080}
+.rbox .rate .e .c_orange{text-decoration:underline}
+
+.sbox .s{height:60px;line-height:60px;background-color:#fff;border-bottom:1px solid #eee}
+.sbox .s h2,.sbox .s span{float:left}
+.sbox .s h2{position:relative;width:217px;font-size:16px;font-weight:normal;color:#333;text-indent:66px;margin-right:20px}
+.sbox .s .hicon{position:absolute;display:block;width:32px;height:32px;left:10px;top:50%;margin-top:-16px;background:url(//img01.51jobcdn.com/im/2017/my/sh.png) center;background-size:32px auto}
+.sbox .s.s1 .hicon{background-position:0 0}
+.sbox .s.s2 .hicon{background-position:0 -32px}
+.sbox .s.s3 .hicon{background-position:0 -64px}
+.sbox .s.s4 .hicon{background-position:0 -96px}
+.sbox .s .rol1{width:425px;color:#666}
+.sbox .s .rol1.ft font{float:left;max-width:355px}
+.sbox .s .rol1.ft em{float:left;font-style:normal}
+.sbox .s .rol2{width:160px;font-size:12px;text-align:center}
+
+.nx_bg,
+.th_icon,
+.shoppingcart_icon,
+.arrup_icon, .arrdown_icon,
+.tj_icon{position:absolute;display:block;top:50%;background:url(//img01.51jobcdn.com/im/2017/my/nx.png) no-repeat}
+.th_icon {width:25px;height:17px;top:-7px;right:-25px;background-position:0 0}
+.shoppingcart_icon {position:relative;display:inline-block;width:18px;height:15px;top:3px;*top:-3px;right:3px;background-position:0 -17px}
+.arrup_icon, .arrdown_icon {width:9px;height:5px;margin-top:-2px;right:20px;background-position:0 -32px}
+.tj_icon{width:16px;height:16px;margin-top:-8px;left:0;background-position:0 -37px}
+.arrdown_icon {background-position:-9px -32px}
+.add_icon {width:14px;height:14px;margin-top:-7px;left:0;background-position:0 0}
+
+.degree_icon{display:inline-block;width:20px;height:20px;vertical-align:middle;background:url(//img01.51jobcdn.com/im/2017/my/icon_sq.png) 0 -89px no-repeat}
+
+.order_titl{font-size:12px;border-top:1px solid #eee;background-color:#fafafa}
+.order_titl li{float:left;line-height:30px;color:#999;text-align:center}
+.order_items{overflow:hidden;border-top:1px solid #eee}
+.order_items li{float:left;line-height:40px;font-size:12px;text-align:center}
+.order_det_titl{height:30px}
+.order_item_det{line-height:30px;font-size:12px;margin:0 15px 15px;background-color:#f3f9ff;border:1px solid #d6e3f0}
+.order_item_det li{float:left;width:120px;margin-left:20px}
+.order_item_det li:first-child{width:200px;margin-left:15px}
+.order_item_det .order_pay{text-align:right;padding-right:30px}
+.order{text-align:center;border-bottom:1px solid #eee}
+.order .order_col1{position:relative;width:120px;padding:0 30px 0 15px}
+.order_items .order_col1,.order_items .order_col4,.order_items .order_col6{color:#333}
+.order_items .order_col1{cursor:pointer}
+.order .order_col2,.order .order_col4{width:70px;padding-right:20px}
+.order_items .order_col2,.order_items .order_col3{color:#666}
+.order .order_col3,.order .order_col5{width:60px;padding-right:20px}
+.order .order_col5{color:#999}
+.order .order_col6{width:180px;padding-right:20px}
+.order .order_col7{width:102px;color:#999;padding-right:15px}
+
+.mserver{border-bottom:1px solid #eee}
+.mserver_title, .stit{line-height:30px;font-size:12px;color:#999;text-align:center;background-color:#fafafa}
+.mserver_title{border-top:1px solid #eee}
+.mserver_title li, .stit li{float:left}
+.mscol1{width:260px;margin:0 10px 0 15px}
+.mscol2,.mscol3,.mscol4{width:80px;font-size:12px;margin:0 10px}
+.mscol2,.mscol3{color:#666}
+.mscol1 .sp2{display:block;height:22px;line-height:10px;#line-height:13px;font-size:12px;color:#666;text-align:center}
+.mserver_title .mscol2,.mserver_title .mscol3{color:#999}
+.mscol5{width:210px;font-size:12px;color:#999;margin:0 15px 0 10px}
+.mserver_item{line-height:39px;text-align:center;border-top:1px solid #eee}
+.mserver_item.lh2{line-height:62px}
+.mserver_item.lh2 .mscol1{line-height:40px}
+.mserver_item li{float:left}
+.mserver_item.done,.mserver_item.done .mscol2,.mserver_item.done .mscol3{color:#999}
+.mserver_item .expired{color:#999}
+
+.new_search{margin-top:15px;padding-bottom:15px;background-color:#fff;border:1px solid #eee}
+.new_search .tit{height:30px;line-height:30px;font-size:12px;color:#999;text-indent:15px;background-color:#fafafa;border-bottom:1px solid #eee}
+.new_search .fcol{position:relative;float:left}
+.new_search .fcol1{width:104px;padding-right:15px;text-align:right}
+.new_search .frow{padding:15px}
+.new_search .e{position:relative;float:left;width:668px;min-height:30px;line-height:30px;color:#333;margin:0 61px 10px}
+.new_search .e label{position:relative;float:left;width:90px;line-height:30px;color:#666;text-align:right;top:0;left:0;padding-right:15px}
+.new_search .e label em{position:absolute;font-style:normal;color:#f60;top:2px;right:3px}
+.new_search .e .ef{color:#333}
+.new_search .e.e2 .txt,.new_search .e.e3 .txt{float:left;width:227px}
+.new_search .e.e2 .txt.pointer,.new_search .e.e3 .txt.pointer{width:190px}
+.new_search .e.e2 .err{width:211px}
+.new_search .e.e3 .err{width:545px;*width:544px}
+.new_search .e .a{margin-left:10px}
+.new_search .e .err .a{margin-left:0}
+.new_search .e .btn{float:left;width:100%;height:28px;line-height:28px;color:#00457d;background-color:transparent;border:0 none;border-radius:0}
+.new_search .e .btn:hover{background-color:#eee}
+.new_search .el{position:relative}
+.new_search .el ul{position:absolute;width:63px;height:28px;line-height:28px;color:#333;overflow:hidden;cursor:pointer;top:0;left:0;background-color:#fff;border:1px solid #ddd;border-right:0 none;z-index:1}
+.new_search .el ul em{position:absolute;width:10px;height:6px;top:11px;right:8px;background-position:-170px -60px !important}
+.new_search .el li{font-size:14px;text-indent:10px}
+.new_search .el li a{display:block;height:27px;color:#333}
+.new_search .el li:hover{background-color:#eee}
+.new_search .el .ipt{position:relative;float:left;width:400px;height:28px;padding-left:63px;background-color:#fff;border:1px solid #ddd;border-right:0 none}
+.new_search .el .mytxt{float:left;width:100%;height:18px;line-height:18px;font-size:14px;font-family:"Microsoft YaHei";color:#333;text-align:left;text-indent:12px;margin:5px 0;padding:0;border:0 none;border-right:1px solid #ddd;border-left:1px solid #ddd}
+.new_search .el ul.on{height:56px;background-color:#FFF;border-color:#ddd;border-right:1px solid #ddd;z-index:5}
+.new_search .el ul.on li{height:28px;text-indent:10px}
+.new_search .el ul.on em{background-position:-150px -60px !important}
+.new_search .addbut{float:left;width:98px;height:28px;font-family:"Microsoft YaHei";color:#333;cursor:pointer;background-color:#fff;border: 1px solid #ddd;border-left:0 none}
+.new_search .addbut:hover,.new_search .addbut:hover input{background-color:#eee}
+.new_search .addbut input{float:left;width:70px;height:28px;line-height:28px;font-size:14px;color:#333;cursor:pointer;margin-left:5px;background-color:#fff;border:0 none}
+.new_search .addbut em{float:right;width:10px;height:10px;margin:9px 12px 0 0;background:url(//img01.51jobcdn.com/im/2017/my/icon_add.png) no-repeat}
+
+.new_search .ep{float:left;height:40px;line-height:40px;color:#333;margin-left:80px}
+.new_search .hr{float:left;width:100%;height:1px;background-color:#eee}
+
+.search_item {line-height:40px;color:#999;text-align:center;padding:0 15px}
+.search_item .scol1 {font-size:16px;color:#000}
+.search_item li {float:left}
+.search_item a {font-size:12px;color:#00457d;padding:0 10px}
+
+.dys_title {line-height:35px;color:#7f6d47;padding-left:15px;border:1px solid #f4e09f;background:#fff7dc;margin-bottom:15px}
+.dys_title a {padding:0 10px}
+.dys_title .la {padding-left:20px}
+.dys {padding:0;border:none}
+.dys_item {line-height:40px;color:#333;border-bottom:1px solid #eee}
+.dys_item li {float:left;margin-left:20px}
+.dys_item .dyscol1 {width:80px;margin-left:15px}
+.dys_item .dyscol2 {width:468px;font-size:12px;color:#999}
+.dys_item .dyscol3 {width:85px}
+.dys_item input{margin-right:5px}
+
+.main {width:822px;color:#333;position:relative;margin-top:20px;margin-left:40px;background-color:#fff}
+.main .pb_lt li {position:relative;font-size:14px;line-height:40px;padding-left:15px;border-bottom:1px solid #eee}
+.main .pb_lt li .sp2 {position:absolute;top:0;right:0;float:right;font-size:12px;padding-right:110px}
+.main .pb_lt .tit {line-height:30px;border-top:1px solid #eee;color:#999;font-size:12px;margin-top:15px;background:#fafafa}
+.main .pb_lt .tit .sp2 {color:#999}
+.main .tips {font-size:12px;color:#999;margin-top:15px}
+
+.mt{height:44px;line-height:44px;color:#999;margin-bottom:15px;border-bottom:2px solid #efefef}
+.mt .mt_l{float:left;font-size:18px}
+.mt .mt_l li{float:left;padding:0 15px}
+.mt .mt_l li,.mt .mt_l a{font-size:18px;color:#999}
+.mt .mt_l .on{color:#333;border-bottom:2px solid #ff6000}
+.mt .mt_l .on a{color:#333}
+.mt .mt_l .on span{color:#ff6000}
+.mt .mt_r{float:right;font-size:12px}
+.mt .mt_r li{float:left;height:45px;padding-left:15px}
+.mt .mt_r .add,.mt .mt_r .vsm,.mt .mt_r .vfw{display:block;height:20px;line-height:20px;margin-top:12px;padding-left:25px;background:url(//img01.51jobcdn.com/im/2017/my/icon_mt.png) 0 -30px no-repeat}
+.mt .mt_r .vsm{background-position:0 -50px}
+.mt .mt_r .vfw{background-position:0 -70px}
+.mt .mt_r .p_but{width:100px;font-size:12px;text-indent:1.5em;margin:0 auto;background:url(//img01.51jobcdn.com/im/2017/my/icon_mt.png) 12px 0 #ff6000 no-repeat}
+.mt .mt_r .p_but:hover{background-color:#ea5800;border-color:#ea5800}
+.mt .mt_b{color:#666;padding:10px;border:1px solid #eee}
+.mt .mt_gb{display:block;width:16px;height:16px;cursor:pointer;margin:15px 15px 0 0;background:url(//img01.51jobcdn.com/im/2017/my/gift.png) no-repeat}
+.mt .mt_r li{position:relative}
+.mt .mt_r .gt{height:27px;background:url(//img01.51jobcdn.com/im/2017/my/gi_top.png) no-repeat}
+.mt .mt_r .gb{height:10px;background:url(//img01.51jobcdn.com/im/2017/my/gi_btm.png) no-repeat}
+.mt .gb_mail{display:none;position:absolute;width:280px;right:35px;top:0;z-index:4}
+.mt .gb_mail .g_in{line-height:20px;font-size:12px;color:#333;padding:0 13px 10px;background:url(//img01.51jobcdn.com/im/2017/my/gi_box.png)}
+.mt .gb_mail h3{text-align:center;font-weight:bold;font-size:14px;color:#ff6000;margin-bottom:14px}
+.mt .gb_mail a{display:block;margin:15px auto 0;width:90px;height:30px;line-height:30px;line-height:30px;font-size:14px;color:#ff6000;text-align:center;border:1px solid #ff6000;border-radius:3px}
+.mt .gb_mail a:hover{color:#fff;background-color:#ff6000}
+.mt .mt_r:hover .gb_mail{display:block}
+.mt .shadow{position:fixed;width:100%;height:100%;left:0;top:0;z-index:999;background:#000;opacity:.7;
+	filter:alpha(opacity=70);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"}
+.mt .luck_pop{position:fixed;width:400px;text-align:center;top:50%;left:50%;margin:-160px 0 0 -200px;padding-bottom:30px;background-color:#fff;border-radius:8px;z-index:1000}
+.mt .luck_pop .l_top{margin-top:-40px;vertical-align:top}
+.mt .luck_pop .close{position:absolute;width:40px;height:40px;cursor:pointer;right:0;top:0;background:url(//img01.51jobcdn.com/im/2016/pop/icon_close2.png) center no-repeat}
+.mt .luck_pop h3{font-size:20px;color:#ff6000}
+.mt .luck_pop .pl{width:330px;margin:0 auto}
+.mt .luck_pop .pt{height:9px;background:url(//img01.51jobcdn.com/im/2017/my/coupons_top.png) no-repeat}
+.mt .luck_pop .pb{width:322px;height:14px;margin:0 auto;background:url(//img01.51jobcdn.com/im/2017/my/coupons_line.png) no-repeat}
+.mt .luck_pop .l_msg{position:relative;width:198px;text-align:left;margin:0 auto;padding:32px 0 30px 122px;background-color:#ffe7be;border-left:1px solid #ffa000;border-right:1px solid #ffa000}
+.mt .luck_pop .jlm{position:absolute;width:70px;height:70px;left:32px;top:32px;background:url(//img01.51jobcdn.com/im/2017/my/tx.png) 0 0 no-repeat;}
+.mt .luck_pop p{font-size:20px;color:#333}
+.mt .luck_pop span{display:block;line-height:20px;text-indent:20px;font-size:18px}
+.mt .luck_pop .lq{display:block;width:322px;height:41px;line-height:41px;font-size:18px;color:#ff6000;margin:-1px auto 0;background-color:#ffe7be;border:1px solid #ffa000;border-top:0 none}
+
+.mc_tb{table-layout:fixed;width:100%;text-align:left}
+.mc_tb .hr{line-height:0}
+.mc_tb .hr td{width:100%;height:1px;background-color:#eee}
+.mc_tb tr{line-height:1.5}
+.mc_tb .atd{position:relative;width:353px;height:120px;font-size:12px;color:#888;padding:20px 0 20px 100px}
+.mc_tb .atd .t_name{font-size:16px;color:#000;margin-bottom:5px}
+.mc_tb .atd .c_666{padding-top:7px}
+.mc_tb .atd .qs, .mc_tb .atd .mtd{float:left;color:#fff;margin-right:5px;padding:0 3px}
+.mc_tb .atd .qs{background:#17be81}
+.mc_tb .atd .mtd{background:#ff6000}
+.mc_tb .atd .cor{color:#ff6e26}
+.mc_tb .btd {width:219px;padding-left:30px}
+.mc_tb .btd p{line-height:2}
+.mc_tb .btd span{position:relative}
+.mc_tb .btd input, .mc_tb .btd form .tap1, form .mc_tb .btd .tap1, .mc_tb .btd form .tap2, form .mc_tb .btd .tap2 {vertical-align:middle;margin-right:3px}
+.mc_tb .ctd{width:90px;text-align:right;padding-top:30px;padding-left:30px}
+.mc_tb .ctd .crbox{position:relative;float:right}
+.mc_tb .ctd .crbox a{font-size:12px}
+.mc_tb .ctd .crbox .ok{position:absolute;width:72px;height:18px;line-height:18px;#line-height:21px;;font-size:12px;color:#3cbe7f;top:8px;left:-25px;padding:5px 10px 5px 33px;background:url(//img01.51jobcdn.com/im/2017/my/ok.png) 10px 5px  #fff no-repeat;border:1px solid #3cbe7f}
+.mc_tb .mbg{position:absolute;width:70px;height:70px;top:50%;left:15px;margin-top:-35px}
+.mc_tb .mbg{background:url(//img01.51jobcdn.com/im/2017/my/tx.png) center;background-size:70px auto}
+.mc_tb .atd1 .mbg{background-position:0 0}
+.mc_tb .atd2 .mbg{background-position:0 -70px}
+.mc_tb .atd3 .mbg{background-position:0 -140px}
+.mc_tb .atd4 .mbg{background-position:0 -210px}
+.mc_tb .cartc1{float:left;width:232px;padding-left:15px}
+.mc_tb .cartc2{float:left;width:92px;padding:0 10px}
+.mc_tb .cartr1{height:30px;line-height:30px;text-align:center;background-color:#fafafa;border-top:1px solid #eee}
+.mc_tb .cartr2{height:40px;line-height:40px;font-size:12px;color:#333;text-align:center;border-top:1px solid #eee}
+.mc_tb .cartr2 .cartc1{font-size:14px}
+.mc_tb .cartr2 .cartc2{color:#666}
+.mc_tb .cartr2 .cartc2 strong{color:#333}
+.mc_tb .cartr3{height:45px;line-height:45px;text-align:right;background-color:#fafafa;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.mc_tb .cartr3 .carttx{float:right;text-align:right}
+.mc_tb .btn_tj{float:right;width:115px;line-height:35px;font-size:16px;color:#fff;margin-top:10px;background-color:#ff6000}
+.mc_tb .btn_tj:hover{background-color:#ea5800}
+
+.btn{width:90px;line-height:30px;text-align:center;cursor:pointer;border-radius:2px}
+.btn_o{color:#fff;background-color:#ff6000;border:1px solid #ff6000}
+.btn_o:hover{background-color:#ea5800;border-color:#ea5800}
+.btn_y{color:#ff6000;margin:10px 0 20px;background-color:#fff2e3;border:1px solid #ffb865}
+.btn_y:hover{background-color:#ffe8cd;border-color:#ffb865}
+
+.situ{color:#7c8ea7;margin:15px 0;padding:20px 0;background-color:#fafafa}
+.situ li{float:left;width:33.3%;text-align:center}
+.situ .s_icon{position:relative;display:inline-block;max-width:264px;vertical-align:middle;padding-left:28px;background:url(//img01.51jobcdn.com/im/2017/my/icon_sq.png) no-repeat}
+.situ .s_icon.s1{background-position:0 0}
+.situ .s_icon.s2{background-position:0 -30px}
+.situ .s_icon.s3{background-position:0 -60px}
+.situ .s_icon.s4{background-position:0 -120px}
+.situ .s_icon.s5{background-position:0 -150px}
+.siti{height:24px;line-height:24px;font-size:26px;color:#ff6000;margin-bottom:10px}
+.siti .c_666{font-size:20px}
+
+.apply{margin:15px 0;padding:20px 15px;background-color:#fafafa}
+.apply .lf{float:left;width:360px;padding:0 40px 0 25px;border-right:1px solid #ddd}
+.apply .lf .p1,.apply .lf .p2{display:block;font-size:16px;color:#333;margin-bottom:10px}
+.apply .lf .p1:hover,.apply .lf .p2:hover{color:#ff6000}
+.apply .lf .p1{font-weight:bold}
+.apply .lf .p2{color:#666}
+.apply .lf .p3{display:block;font-size:14px;color:#ff6000}
+.apply .lf .p3:hover{text-decoration:underline}
+.apply .rt{float:right;width:546px}
+.apply .rt li{float:left;width:33.3%;color:#7c8ea7;text-align:center}
+.apply .a_icon{position:relative;display:inline-block;max-width:264px;vertical-align:middle;padding-left:23px;background:url(//img01.51jobcdn.com/im/2017/my/icon_apply.png) no-repeat}
+.apply .a_icon.i1{background-position:0 0}
+.apply .a_icon.i2{background-position:0 -30px}
+.apply .a_icon.i3{background-position:0 -60px}
+.apply .siti{height:40px;line-height:40px;font-size:28px}
+.apply.school .lf{width:640px}
+.apply.school .rt{width:266px}
+.apply.school .rt li{width:100%}
+.apply.school .siti{height:24px;line-height:24px}
+
+.stati h3{line-height:20px}
+.stati .sc1 h3{font-size:16px;font-weight:bold;margin:25px 0;padding-left:15px;border-left:4px solid #ff6000}
+.stati .sc2 h3{font-size:18px;color:#999;padding:25px 0}
+.stati .lt{float:left;width:175px;text-align:right}
+.stati .pgs{position:relative;float:left;width:160px;height:10px;margin-top:5px;margin-left:10px;background-color:#eee;border-radius:2px}
+.stati .rbox .pgs{margin:8px 10px 0 4px}
+.stati .tit{line-height:28px;font-size:12px;color:#999;text-align:center;margin-top:20px;background-color:#fafafa;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.stati .bar{position:absolute;float:left;width:150px;height:10px;top:0;left:0;border-radius:2px}
+.stati .sc2 {width:990px;padding-left:10px}
+.stati .sc2 .item{position:relative;float:left;width:495px;min-height:225px}
+.stati .sc2 .item ul{position:relative;height:155px;overflow:hidden;#zoom:1}
+.stati .sc2 .view{position:absolute;height:16px;line-height:16px;font-size:12px;color:#00457d;vertical-align:middle;right:40px;bottom:12px;padding-right:15px;cursor:pointer;background:url(//img01.51jobcdn.com/im/2016/resume/icon_resume.png) -456px -60px no-repeat;z-index:2}
+.stati .sc2 .view:hover{color:#ff6000;background-position:-456px -80px}
+.stati .sc2 .view.on{background-position:-456px -100px}
+.stati .sc2 .view.on:hover{background-position:-456px -120px}
+.stati .item{color:#666}
+.stati .item li{margin:9px 0}
+.stati .item .num{margin-left:10px;padding-right:20px}
+.stati .st1 .bar{background-color:#fa6666}
+.stati .st2 .bar{background-color:#bb98cb}
+.stati .st3 .bar{background-color:#f0b753}
+.stati .st4 .bar{background-color:#a0badd}
+.stati .st5 .bar{background-color:#52cbad}
+.stati .scbox{position:relative;width:501px;height:155px}
+.stati .scin{position:absolute;width:55px;height:92px;top:37px;left:35px;background:url(//img01.51jobcdn.com/im/2017/my/icon_ren.png) no-repeat}
+.stati .nv{left:250px;background-position:-56px 0}
+.stati .zchart{height:430px}
+.stati .zchart .zch{position:relative;float:left;width:200px;height:430px;margin:0 25px}
+.stati .zchart .zch span{position:absolute;width:60px;color:#666;text-align:center;top:76px;left:50%;margin-left:-30px}
+.stati .zchart .zct{width:100%;height:430px}
+.stati .scbox .e{height:76px;line-height:76px}
+.stati .scbox .e em{float:left;width:175px;height:76px;background:url(//img01.51jobcdn.com/im/2017/my/icon_mw.png) 120px 14px no-repeat}
+.stati .scbox .e.w em{background-position:120px -68px}
+.stati .scbox .e .pgs{height:30px;margin-top:23px}
+.stati .scbox .e .bar{height:30px}
+#shart{position:absolute;width:280px;height:140px;top:10px;left:100px}
+
+.content{width:1002px;margin:0 auto;padding:20px 0}
+.content .adp{color:#666;text-align:right;margin-bottom:15px}
+.exlt{float:left;width:140px;overflow:hidden;background-color:#fafafa;border-left:1px solid #eee;border-bottom:1px solid #eee}
+.exlt a{position:relative;display:block;height:42px;line-height:42px;font-weight:bold;color:#333;padding:0 15px;border:1px solid transparent;border-right-color:#eee;border-left-width:2px}
+.exlt a span{display:block;height:43px;cursor:pointer;border-bottom:1px solid #eee}
+.exlt a:hover{background-color:#f1f1f1;border-right:1px solid #f1f1f1;border-left-color:#f1f1f1}
+.exlt a:hover span,.exlt a.on span{border-bottom:0}
+.exlt a.off{cursor:default}
+.exlt a.off:hover{background-color:transparent;border-right-color:#eee;border-left-color:transparent}
+.exlt a.on,.exlt .more a.on{font-weight:bold;color:#ff6000;background-color:#fff;border:1px solid #eee;border-right-color:#fff;border-left:2px solid #ff6000}
+.exlt a:first-child{border-top:1px solid #eee}
+.exlt .mbtn em{float:right;width:9px;height:44px;background:url(//img01.51jobcdn.com/im/2017/my/ns2.png) 0 -71px no-repeat}
+.exlt .mbtn.mk em{background-position:0 -97px}
+.exlt .more{display:none}
+.exlt .more a{font-weight:normal;color:#666;text-indent:.5em}
+.exlt .more a:first-child{border-top-color:transparent}
+.exlt .more a.on:first-child{border-top: 1px solid #eee}
+.exlt .hot,.exlt .new{position:absolute;display:inline-block;width:20px;height:42px;vertical-align:middle;margin-left:5px;background:url(//img01.51jobcdn.com/im/2017/my/hot.png) 0 5px no-repeat}
+.exlt .new{background-image:url(//img01.51jobcdn.com/im/2017/my/new.png)}
+.exrt{float:right;width:822px;#overflow:hidden;background-color:#fff}
+.exrt .a{font-size:12px}
+.exrt .exmsg{display:none}
+.exrt .tc{color:#999;text-align:center;padding:10px 0}
+.exrt .tc a{font-size:14px}
+.exrt .tlp{font-size:12px;color:#999;margin:20px 0}
+.exrt .btnbox{text-align:center;padding-top:15px}
+
+.none{line-height:20px;font-size:14px;text-align:center;color:#999;padding:100px 0;background-color:#fff}
+.none .no_ic{display:block;width:80px;height:60px;margin:0 auto 10px;background:url(//img01.51jobcdn.com/im/2017/my/n.png);background-position:center;background-size:80px auto}
+.none.n1 .no_ic{background-position:0px 0}
+.none.n2 .no_ic{background-position:0px -60px}
+.none.n3 .no_ic{background-position:0px -120px}
+.none.n4 .no_ic{background-position:0px -180px}
+.none.n5 .no_ic{background-position:0px -240px}
+.none.n6 .no_ic{background-position:0px -300px}
+.none.n6 .p_but{width:126px}
+.none.n7 .no_ic{background-position:0px -360px}
+.none.n8 .no_ic{background-position:0px -420px}
+.none.n9 .no_ic{background-position:0px -480px}
+.none.n10 .no_ic{background-position:0px -540px}
+.none.n11 .no_ic{background-position:0px -604px}
+.none.n12 .no_ic{background-position:0px -664px}
+.none.n13 .no_ic{width:170px;height:150px;background:url(//img01.51jobcdn.com/im/2017/my/n2.png) center no-repeat}
+.none.n_lr{position:relative;padding:40px 0}
+.none.n_lr .no_ic{display:inline-block;vertical-align:middle;margin:0}
+.none.n_lr p{display:inline-block;vertical-align:middle}
+.none .a{font-size:14px}
+.none .c_yellow{font-weight:bold}
+.none .p_but{min-width:40px;padding:0 20px}
+
+.query{margin:40px 0}
+.query .c{position:relative;min-height:40px;line-height:40px;font-size:16px;color:#333;margin:0 0 25px 122px;padding-left:120px}
+.query .c label{position:absolute;width:100px;color:#666;text-align:right;top:0;left:0}
+.query .c2 .txt{float:left}
+.query .txt, .query .txt .ef{height:38px;line-height:38px;font-size:16px}
+.query .txt{width:400px;margin-right:10px}
+.query .txt.pointer{width:350px;padding-right:50px}
+.query .ic{width:49px;top:10px}
+.query .i_arrow{background-position:-66px 0}
+.query .i_block{background-position:-30px 0}
+.query .btnbox{text-indent:65px;padding-top:15px}
+.query .p_but{width:400px;height:38px;line-height:38px;font-size:20px;text-indent:0}
+.query.Fm .udbox,.query.Fm .ul{top:38px}
+.query.Fm .udbox .ul{top:0}
+
+.spt{padding-bottom:40px}
+.spt .tls{margin-bottom:15px}
+.spt .tls h3{position:relative;font-size:18px;color:#333;padding-left:26px;margin-bottom:15px}
+.spt .tls li{float:left;width:385px;line-height:30px;font-size:16px;color:#333;margin:0 0 8px 26px}
+.spt .tls li span{color:#666}
+.spt .a{position:relative;z-index:2}
+.spt .p_but{width:198px;height:38px;line-height:38px;font-size:18px}
+.spt .chbox{position:relative;width:822px;height:275px;*height:255px;margin-bottom:10px;background:url(//img01.51jobcdn.com/im/2017/my/bg_map.png) center top no-repeat}
+.spt .chbox .c_orange{position:absolute;width:80px;height:30px;line-height:30px;font-size:30px;font-weight:bold;text-align:center;bottom:12px;left:379px}
+@-moz-document url-prefix(){.spt .chbox .c_orange{bottom:18px}}
+.spt .chbox .c_orange em{font-size:24px;font-weight:normal;font-style:normal}
+.spt .spt_p{font-size:18px;color:#333;text-align:center;margin-bottom:28px}
+#chart{width:822px;height:250px}
+
+.warn{font-size:12px;color:#7f6d47;margin-bottom:15px;padding:5px 15px;background-color:#fff7dc;border:1px solid #f4e09f}
+.warn .e{position:relative;padding-left:72px}
+.warn .e label{position:absolute;color:#55431d;top:0;left:0}
+.warn .e.e2{float:left;max-width:540px;margin-right:15px}
+.warn .c_orange{font-weight:bold}
+.warn.w1,.warn.w4{padding-left:40px;background:url(//img01.51jobcdn.com/im/2017/my/warn.png) #fff7dc 15px center no-repeat}
+.warn.w2,.warn.w3{position:relative;line-height:24px;font-size:14px;padding:10px 15px;background-color:#fffaea}
+.warn.w2 strong,.warn.w3 strong{display:block;font-weight:bold;font-size:16px;margin-bottom:8px}
+.warn.w2 .close,.warn.w3 .close,.warn.w4 .close{position:absolute;width:15px;height:15px;cursor:pointer;top:10px;right:15px;background:url(//img01.51jobcdn.com/im/2017/my/icon_close.png) no-repeat}
+.warn.w2 .a{font-size:14px}
+.warn.w3,.warn.w4{padding-right:165px}
+.warn.w3 .e span{display:inline-block;white-space:nowrap;margin-right:5px}
+.warn.w3 .btnbox{position:absolute;width:122px;right:40px;bottom:15px;padding-top:0}
+.warn.w3 .p_but{width:100px}
+.warn.w4{position:relative}
+.warn.w4 .btnbox{position:absolute;right:15px;top:50%;margin-top:-15px}
+.warn.w4 .p_but{margin:0;padding:0 20px}
+.warn .err{float:right;margin-top:-24px;#margin:-29px 15px 0 0}
+.warn .hpBox{display:inline-block;#display:inline;vertical-align:middle;margin-top:-2px;#margin-top:0;#zoom:1}
+.warn .wpBox{position:relative;display:inline-block;#display:inline;#vertical-align:middle;#zoom:1}
+.warn .wpBox .w_head{color:#00457d;cursor:pointer}
+.warn .wpBox .w_head .w_arr{position:absolute;display:none;width:14px;height:8px;bottom:-1px;left:40px;vertical-align:middle;z-index:2;background:url(//img01.51jobcdn.com/im/2017/my/icon_wpbox.png) center no-repeat}
+.warn .wpBox .w_body{position:absolute;display:none;width:221px;padding:15px 0 8px;top:25px;left:-64px;background-color:#fff;border:1px solid #f4e09f}
+.warn .wpBox .w_body .c{float:left;padding:0 15px;border-left:1px solid #e8e8e8}
+.warn .wpBox .w_body .c:first-child{border-left:0 none}
+.warn .wpBox .w_body img{vertical-align:top}
+.warn .wpBox .w_body p{width:80px;height:18px;line-height:18px;font-size:12px;color:#666;text-align:center;clear:both;padding-top:5px}
+.warn .wpBox:hover{height:25px;margin-bottom:-5px;z-index:6}
+.warn .wpBox:hover .w_head{color:#ff6000}
+.warn .wpBox:hover .w_arr,.warn .wpBox:hover .w_body{display:block}
+
+.resume{overflow:hidden;margin-bottom:15px;background-color:#fafafa;border:1px solid #eee}
+.resume .rex{height:1px;margin:3px 0;background-color:#eee}
+.rview{position:relative;height:184px;overflow:hidden;background:url(//img01.51jobcdn.com/im/2017/my/ex_bg2.png) #fff repeat-x}
+.rview:hover .pre,.rview:hover .next{visibility:visible}
+.rview .pre,.rview .next{position:absolute;width:40px;height:40px;visibility:hidden;top:72px;left:-20px;cursor:pointer;background:url(//img01.51jobcdn.com/im/2017/my/pre.png) no-repeat;z-index:2}
+.rview .next{left:auto;right:-20px;background-image:url(//img01.51jobcdn.com/im/2017/my/next.png)}
+.rview .page{position:absolute;bottom:10px;left:50%}
+.rview .page .pli{float:left;width:15px;height:4px;color:#fff;text-align:center;background:url(//img01.51jobcdn.com/im/2017/my/icon_page.png) 5px 0 no-repeat}
+.rview .page .pli.on{background-position:-13px 0}
+.rview .rmsg{position:absolute;top:0;left:0}
+.rview .rmsg .rli{position:relative;float:left;width:464px;height:105px;color:#666;padding:45px 170px 34px 186px}
+.rview .rli img{position:absolute;left:50px}
+.rview .rli .h1{position:relative;height:20px;font-size:18px;font-weight:bold;color:#333;margin-bottom:10px}
+.rview .rli .rcon{position:absolute;top:50%;left:186px}
+.rview .h1 a{float:left;max-width:464px;height:22px;color:#333}
+.rview .h1 a:hover{color:#ff6000}
+.rview .h1.e1 a{max-width:389px}
+.rview .h1.e2 a{max-width:325px}
+.rview .h1 .gk,.rview .h1 .td{float:left;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;margin:2px 0 0 5px;padding:0 5px;top:2px;background-color:#ff9100;border-radius:2px}
+.rview .h1 .gk{background-color:#56b1e6}
+.rview .rli .r1,.rview .rli .r2{width:444px;padding-left:20px;background:url(//img01.51jobcdn.com/im/2017/my/icon_re.png) 0 -23px no-repeat}
+.rview .rli .r1{margin-bottom:5px;background-position:0 2px}
+.rview .rli .a{position:absolute;top:15px;right:15px}
+.rview .e{position:relative;margin-bottom:10px;padding-left:44px}
+.rview .e label{position:absolute;top:0;left:0}
+.rview .btnbox{position:absolute;width:122px;top:61px;right:40px;padding-top:0}
+.rview .p_but{width:100px;margin-bottom:15px}
+.rsee{padding:0 15px;background-color:#fff;border-bottom:1px solid #eee}
+.rsee .rsl{float:left;width:33.3%;height:24px;line-height:24px;text-align:center;text-indent:3em;padding:18px 0;background:url(//img01.51jobcdn.com/im/2017/my/icon_rse.png) 71px 14px no-repeat;border-top:1px solid #eee}
+.rsee .rsl a{display:block;font-size:14px;color:#333;border-left:1px solid #eee}
+.rsee .rsl a:hover{text-decoration:underline}
+.rsee .rsl.r1{background-position:76px -32px}
+.rsee .rsl.r2{background-position:72px -78px}
+.rsee .rsl:first-child a{border-left:none}
+.rsee .rsl .c_orange{font-weight:bold}
+
+.ebox{margin-bottom:15px;border:1px solid #eee}
+.ebox .e_tit{height:50px;line-height:50px;font-size:18px;font-weight:bold;color:#333;padding:0 15px;background-color:#fff;border-bottom:1px solid #eee}
+.ebox .e_tit .a{float:right;font-weight:normal}
+.ebox .e_tit .f12{font-weight:normal}
+.ebox .e_tit .c_orange{font-weight:bold}
+.ebox .dw_table .el{border-top:1px dotted #ddd}
+.ebox .dw_table .el:first-child{border-top:none}
+.ebox .dw_tlc{border-bottom:0 none}
+.ebox .lmsg{margin-bottom:0}
+.ebox .lmsg .e,.ebox .apox .e{margin-top:0;border:0 none;border-top:1px solid #eee}
+.ebox .lmsg .e:first-child,.ebox .apox .e:first-child{border-top:0 none}
+.ebox .tc{border-top:1px solid #eee}
+
+.ebox.e2,.ebox.e3{float:left;width:402px;margin-left:14px}
+.ebox.e2{margin-left:0}
+
+.emsg .e{display:block;height:48px;line-height:24px;padding:8px 15px;border-bottom:1px solid #eee}
+.emsg .e .h1,.emsg .e .h2{position:relative;height:24px;padding-right:155px}
+.emsg .e .h1 a{font-size:16px;color:#333}
+.emsg .e .h1 a:hover{color:#ff6000}
+.emsg .e .h2{color:#666;padding-right:220px}
+.emsg .e .h2 label{max-width:210px}
+.emsg .e label{position:absolute;max-width:145px;font-size:12px;color:#999;text-align:right;top:0;right:0}
+.emsg .e p,.emsg .h1 a{float:left;max-width:100%}
+.emsg .e.qy .h1,.emsg .e.td .h1{padding-right:185px}
+.emsg .e.qy .h1 em,.emsg .e.td .h1 em{position:absolute;width:55px;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;text-indent:3px;margin-left:5px;top:2px;background-color:#ff6000;border-radius:2px}
+.emsg .e.qy .h1 em{background-color:#3cbe7f}
+.emsg.e1 .e{border-top:1px dotted #ddd;border-bottom:none}
+.emsg.e1 .e:first-child{border-top:none}
+
+.eul{padding:5px}
+.eul a{float:left;width:372px;line-height:30px;font-size:14px;color:#333;margin:0 10px}
+.eul a:hover{color:#ff6000}
+
+.dw_table{position:relative;color:#666;background-color:#FFF}
+.dw_table .el{height:40px;line-height:40px;font-size:14px;overflow:hidden;padding:0 5px;border-top:1px solid #eee}
+.dw_table .el.mk{background-color:#F3F9FF}
+.dw_table .el .lbox{float:left}
+.dw_table .el.lose,.dw_table .el.lose .t6{overflow:visible}
+.dw_table .el.lose .t6 a{color:#999;cursor:default}
+.dw_table .el.lose .lost{display:inline-block;#display:inline;width:48px;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;text-align:center;margin:11px 2px 11px 5px;background-color:#bbb;border-radius:2px;#zoom:1}
+.dw_table .el.lose .hpBox{display:inline-block;#display:inline;vertical-align:middle;margin-top:10px;#zoom:1}
+.dw_table .el.lose .h_arr{bottom:4px;left:0}
+.dw_table .el.lose .h_bbox{position:absolute;display:none;width:160px;line-height:20px;top:25px;right:-70px;background-color:#fff;border:1px solid #ddd;box-shadow:0 0 5px #ddd;z-index:5}
+.dw_table .el.lose .h_con{padding:2px 10px}
+.dw_table .el.lose.on{position:relative;z-index:6}
+.dw_table .el.lose.on .h_arr,.dw_table .el.lose.on .h_bbox{display:block}
+.dw_table .el.lose.on .h_head{z-index:6}
+.dw_table .t1,.dw_table .t2,.dw_table .t3,.dw_table .t4,
+	.dw_table .t5,.dw_table .t6,.dw_table .t7,.dw_table .t8,
+	.dw_table .t9,.dw_table .t10,.dw_table .t11,
+	.dw_table .t12,.dw_table .t13,.dw_table .t14,.dw_table .t15,.dw_table .t16,.dw_table .t17,.dw_table .t18{float:left;height:40px;line-height:40px;font-size:14px;overflow:hidden;padding:0 10px}
+.dw_table .t1,.dw_table .t6,.dw_table .t9,.dw_table .t12{position:relative}
+.dw_table .t1 a,.dw_table .t6 a,.dw_table .t9 span,.dw_table .t12 a,.dw_table .t18{float:left;height:40px;font-size:16px;font-family:"Microsoft YaHei";color:#333}
+.dw_table .t1{width:203px}
+.dw_table .t1 a{max-width:203px;color:#000}
+.dw_table .t6{width:550px}
+.dw_table .t6 a{max-width:460px}
+.dw_table .t9{width:272px}
+.dw_table .t9 span{max-width:219px;font-size:14px}
+.dw_table .t12{width:182px}
+.dw_table .t12 a{max-width:159px}
+.dw_table .t18{width:160px}
+.dw_table .t18 a{max-width:160px}
+
+.dw_table .t2 a,.dw_table .t10 a,.dw_table .t13 a{float:left;height:40px;font-size:14px;font-family:"Microsoft YaHei";color:#666}
+.dw_table .t2{width:220px}
+.dw_table .t2 a{max-width:220px;color:#333}
+.dw_table .t10{width:340px}
+.dw_table .t10 a{max-width:340px}
+.dw_table .t13{width:220px}
+.dw_table .t13 a{max-width:220px}
+
+.dw_table .t3,.dw_table .t5{width:100px;color:#888;text-align:center}
+.dw_table .t5{width:55px}
+
+.dw_table .t4,.dw_table .t15{width:132px;font-size:16px;color:#FF6000;text-align:center}
+.dw_table .t15{width:110px;font-size:14px}
+
+.dw_table .t7,.dw_table .t8,.dw_table .t11,.dw_table .t14,.dw_table .t17{width:222px;color:#999;text-align:center}
+.dw_table .t7{width:180px}
+.dw_table .t11{width:140px}
+.dw_table .t14{width:100px}
+.dw_table .t17{width:172px}
+
+.dw_table .t16{width:82px;font-size:12px;color:#bbb;text-align:right}
+
+.dw_table .t2 a:link,.dw_table .t6 a:link,.dw_table .t12 a:link,.dw_table .t18 a:link,.dw_table .t2 a:active,.dw_table .t6 a:active,.dw_table .t12 a:active,.dw_table .t18 a:active{color:#333}
+.dw_table .t1 a:link,.dw_table .t1 a:visited,.dw_table .t1 a:active{color:#000}
+.dw_table .t7 a:link,.dw_table .t10 a:link,.dw_table .t13 a:link,.dw_table .t7 a:active,.dw_table .t10 a:active,.dw_table .t13 a:active{color:#666}
+.dw_table .t2 a:visited,.dw_table .t6 a:visited,.dw_table .t7 a:visited,.dw_table .t10 a:visited,.dw_table .t12 a:visited,.dw_table .t13 a:visited,.dw_table .t18 a:visited{color:#333}
+.dw_table .t2 a:hover,.dw_table .t1 a:hover,.dw_table .t6 a:hover,.dw_table .t7 a:hover,.dw_table .t10 a:hover,.dw_table .t12 a:hover,.dw_table .t13 a:hover,.dw_table .t18 a:hover{color:#FF6000}
+
+.dw_table .nread span,.dw_table .nread span{font-weight:bold;color:#333}
+.dw_table .title{height:30px;line-height:30px;background-color:#fafafa;border-top:1px solid #eee}
+.dw_table .title .t6,.dw_table .title .t7,.dw_table .title .t8,
+	.dw_table .title .t9,.dw_table .title .t10,.dw_table .title .t11,
+	.dw_table .title .t12,.dw_table .title .t13,.dw_table .title .t15,.dw_table .title .t14,.dw_table .title .t16,.dw_table .title .t17,.dw_table .title .t18{height:30px;line-height:30px;font-size:12px;color:#999;text-align:center}
+.dw_table .title .t16{width:100px}
+.dw_table .title .t6,.dw_table .title .t18{text-align:left}
+
+.dw_table .check{position:relative;float:left;top:14px;margin-right:8px}
+.dw_table .e1,.dw_table .e2,.dw_table .e3,.dw_table .fj,.dw_table .zk{float:left;width:20px;height:20px;margin:10px 10px 0 0;background:url(//img01.51jobcdn.com/im/2017/my/icon_rs.png) -20px 0 no-repeat}
+.dw_table .e2{background-position:-20px -20px}
+.dw_table .e3{background-position:-20px -40px}
+.dw_table .fj,.dw_table .zk{cursor:pointer;margin:10px 0 0 5px}
+.dw_table .fj{background-position:0 0}
+.dw_table .fj:hover{background-position:-40px 0}
+.dw_table .zk{background-position:0 -21px}
+.dw_table .zk:hover{background-position:-40px -21px}
+.dw_table .t10.tg1 a{max-width:315px}
+.dw_table .t10.tg2 a{max-width:290px}
+.dw_table .hr{height:1px;background-color:#eee}
+
+.dw_tlc{height:42px;line-height:42px;background-color:#F8F8F8;border-top:1px solid #eee;border-bottom:1px solid #eee}
+.dw_tlc .chall{float:left;width:80px;height:42px}
+.dw_tlc .op{float:right;padding-right:15px}
+.dw_tlc .op span{float:left;width:123px;height:26px;line-height:26px;cursor:pointer;margin:7px 0 0 30px;
+	-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px}
+.dw_tlc .op i{float:left;width:20px;height:20px;margin:3px 5px 0 35px}
+.dw_tlc .but_sq{color:#FFF;background-color:#FF6000;border:1px solid #FF6000}
+.dw_tlc .but_sq:hover{background-color:#EA5800}
+.dw_tlc .but_sq i{background-position:-70px 0}
+.dw_tlc .but_sc{color:#FF6000;background-color:#FFF2E3;border:1px solid #FFB865}
+.dw_tlc .but_sc:hover{background-color:#FFE8CD}
+.dw_tlc .but_sc i{background-position:-70px -20px}
+.dw_tlc .but_sf{color:#999;background-color:#fff;border:1px solid #999}
+.dw_tlc .but_sf:hover{background-color:#eee}
+.dw_tlc .but_sf i{background:url(//img01.51jobcdn.com/im/2017/my/icon_clear.png) 2px no-repeat}
+.dw_tlc .but_sq.uck{cursor:default;background-color:#ddd;border-color:#ddd}
+.dw_tlc .but_sq.uck:hover{background-color:#ddd}
+.dw_tlc .but_sf.uck{color:#fff;cursor:default;background-color:#ddd;border-color:#ddd}
+.dw_tlc .but_sf.uck:hover{background-color:#ddd}
+.dw_tlc .but_sf.uck i{background:url(//img01.51jobcdn.com/im/2017/my/icon_clear2.png) 2px no-repeat}
+.dw_tlc .check{top:15px;*top:11px;left:15px;margin-right:25px;_margin-right:19px}
+
+/*------·ÖÒ³------*/
+.dw_page{position:relative;height:30px;line-height:30px;color:#666;overflow:hidden;padding:15px 0 30px}
+.dw_page .p_box{position:absolute;width:200%;left:-50%}
+.dw_page .p_wp{position:absolute;margin-left:50%}
+.dw_page .p_in{position:relative;float:left;left:-50%}
+.dw_page ul,.dw_page .td,.dw_page .mytxt,.dw_page .og_but{float:left;font-size:14px}
+.dw_page ul{height:30px}
+.dw_page li{float:left;width:30px;height:30px;line-height:30px;font-size:12px;text-align:center;margin-right:10px;background-color:#FFF}
+.dw_page li a{display:block;width:30px;font-size:12px;color:#666;border:1px solid #DDD}
+.dw_page li a:hover{color:#FF6000;border-color:#FF6000}
+.dw_page li.on{color:#FF6000;border-color:transparent}
+.dw_page li.bk,.dw_page li.bk a{width:64px}
+.dw_page li.bk span{display:block;color:#BBB;font-size:12px;border:1px solid #DDD}
+.dw_page .mytxt{width:28px;height:28px;font:12px/28px "Microsoft YaHei";color:#333;text-align:center;margin:0 5px;border:1px solid #DDD}
+.dw_page .og_but{width:45px;height:30px;line-height:30px;color:#666;text-align:center;cursor:pointer;margin-left:10px;background-color:#FFF;border:1px solid #DDD}
+.dw_page .og_but:hover{color:#FF6000;border-color:#FF6000}
+/*------·ÖÒ³ END------*/
+
+/*------·µ»Ø¶¥²¿------*/
+#goTop{position:fixed;display:none;width:48px;height:40px;line-height:16px;color:#FFF;font-size:0;text-align:center;bottom:68px;margin-left:1042px;padding-top:8px;background:url(//img01.51jobcdn.com/im/jobs/img_top.png) center center #C1C1C1 no-repeat}
+#goTop:hover{font-size:12px;background:#FF6000}
+/*------·µ»Ø¶¥²¿ END------*/
+
+/*------Òâ¼û·´À¡------*/
+.dw_fb{position:fixed;width:48px;height:48px;overflow:hidden;text-indent:-200px;text-decoration:none !important;bottom:10px;margin-left:1042px;background:url(//img01.51jobcdn.com/im/jobs/fb_img.png) 0 -48px no-repeat}
+.dw_fb:hover{background-position:0 0}
+/*------Òâ¼û·´À¡ END------*/
+.hpBox.h_orange .h_arr,.apox .e .view em,.apox .e .d em,.lmsg .e .l1 em{background:url(//img01.51jobcdn.com/im/2017/my/icon_apox.png) no-repeat}
+
+.hpBox{position:relative;font-size:12px;line-height:20px}
+.hpBox .h_head{position:relative;height:30px}
+.hpBox .hp{display:block;width:20px;height:20px;background:url(//img01.51jobcdn.com/im/2016/form/form.png) 0 -100px no-repeat;cursor:pointer}
+.hpBox .hp:hover{background-position:-20px -100px}
+.hpBox .h_arr{position:absolute;display:none;width:21px;height:10px;bottom:0;*bottom:-12px;left:38px;vertical-align:middle;background:url(//img01.51jobcdn.com/im/2016/form/hp_arr.png) no-repeat}
+.hpBox .h_body{position:absolute;display:none;width:458px;line-height:20px;top:26px;*top:38px;right:0;z-index:5}
+.hpBox .h_box{position:relative;width:458px;font-size:12px;color:#666;background:url(//img01.51jobcdn.com/im/2016/form/hp_con.png) repeat-y}
+.hpBox .h_top,.hpBox .h_btm{width:100%;height:8px;background:url(//img01.51jobcdn.com/im/2016/form/hp_top.png) repeat-x}
+.hpBox .h_btm{background-image:url(//img01.51jobcdn.com/im/2016/form/hp_btm.png)}
+.hpBox .h_con{padding:6px 14px}
+.hpBox .e strong{font-weight:bold}
+.hpBox .e .ti{padding-left:15px}
+.hpBox .c{position:relative;min-height:20px;margin-top:10px;padding-left:50px}
+.hpBox .c label{position:absolute;font-weight:bold;top:0;left:0}
+.hpBox.on,.hpBox.on .h_head{z-index:6}
+.hpBox.on .h_arr,.hpBox.on .h_body{display:block}
+.hpBox.h_orange .h_arr{bottom:1px;background-position:-30px -40px}
+.hpBox.h_orange .h_body{border:1px solid #ff9f20}
+.hpBox.up .h_arr{top:-9px;background-position:0 -40px}
+.hpBox.up .h_body{top:auto !important;bottom:38px}
+
+.my_top{width:1002px;font-size:12px;margin:10px auto 0}
+.my_top .picText_banner{position:relative;background-color:#f7f7f7}
+.my_top .labClose{position:absolute;width:8px;height:7px;overflow:hidden;top:6px;right:6px;cursor:pointer;background:url(//img01.51jobcdn.com/im/resume/iconMain.png) -7px -28px no-repeat}
+.my_top .b_pic_l{float:left;width:770px}
+.my_top .b_pic_l img{vertical-align:top}
+.my_top .b_text_r{float:left;width:229px;overflow:hidden;padding-top:2px}
+.my_top .b_text_r li{padding-left:10px}
+.my_top .b_text_r a{display:inline-block;width:200px;line-height:16px;color:#333;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.my_top .b_text_r a:hover{color:#ff6000}
+
+.replace{padding:15px}
+.replace .frow{margin-bottom:10px;padding-top:30px;border-top:1px solid #eee}
+.replace .frow:first-child{padding-top:0;border-top:0 none}
+.replace .tit{height:22px;line-height:22px;font-size:18px;color:#333;margin-bottom:30px}
+.replace .num{float:left;font-size:28px;font-family:'Agency FB';font-weight:bold;color:#ff6000;margin-right:15px}
+.replace .e{position:relative;float:left;width:792px;min-height:30px;line-height:30px;color:#333;margin-bottom:20px}
+.replace .e label{position:relative;float:left;width:181px;line-height:30px;color:#666;text-align:right;top:0;left:0;padding-right:15px}
+.replace .e label em{position:absolute;font-style:normal;color:#f60;top:2px;right:3px}
+.replace .e .txt{width:400px}
+.replace .e .txt.pointer{float:left;width:361px;margin-right:10px}
+.replace .e .ef{color:#333;line-height:28px}
+.replace .e .tbox{width:596px;padding-left:0;clear:none}
+.replace .rab{height:30px;margin-bottom:10px}
+.replace .rab span{float:left;width:199px;height:28px;line-height:28px;color:#333;text-align:center;margin-left:-1px;background-color:#fff;border:1px solid #ddd}
+.replace .rab span:first-child{width:198px;margin-left:0}
+.replace .rab .on{color:#fff;background-color:#ff9f20;border-color:#ff9f20}
+
+.apox .e{height:60px;margin-top:10px;padding:15px 20px;background-color:#fff;border:1px solid #eee}
+.apox .e:first-child{margin-top:0}
+.apox .e .c_light_blue{font-size:12px;color:#7c8ea7}
+.apox .e .dt{float:left;width:30px;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;text-align:center;margin:6px 0 0 8px;background-color:#5591d5;
+	-webkit-border-radius:2px;-moz-border-radius:2px;-o-border-radius:2px;border-radius:2px}
+.apox .e .li{float:left;line-height:30px}
+.apox .e .l1{width:302px}
+.apox .e .l2{width:144px;text-align:center;padding:0 18px 0 47px;border-right:1px solid #ddd}
+.apox .e .l3{width:138px;margin:0 4px 0 25px}
+.apox .e .l3 .c_orange{font-weight:bold}
+.apox .e .l4{width:84px}
+.apox .e .zhn,.apox .e .xz,.apox .e .gs, .apox .e .dq,.apox .e .jl{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.apox .e .zhn{float:left;max-width:160px;font-size:16px;color:#333}
+.apox .e .zhn:hover,.apox .e .gs:hover{color:#ff6000}
+.apox .e .xz{float:left;max-width:91px;font-size:16px;color:#ff6000;margin-left:10px}
+.apox .e .gs,.apox .e .dq{float:left;max-width:168px;color:#666}
+.apox .e .dq{max-width:112px;height:20px;line-height:20px;margin:5px 0 5px 10px;padding-left:10px;border-left:1px solid #ddd}
+.apox .e .rq{color:#666}
+.apox .e .jl{font-size:12px;color:#999}
+.apox .e .view{font-size:14px;color:#ff6000;cursor:pointer}
+.apox .e .view:hover{text-decoration:underline}
+.apox .e .view em{display:inline-block;width:14px;height:14px;vertical-align:middle;margin:-2px 0 0 4px;background-position:0 0}
+.apox .e .on .view em{background-position:-30px 0}
+.apox .e .h_arr{left:14px}
+.apox .e .h_body{width:380px;*top:26px;right:-38px;padding:16px 22px 16px 0;background-color:#fff}
+.apox .e .hpBox{top:5px}
+.apox .e .d{position:relative;line-height:20px;font-size:12px;color:#999;margin-top:10px;padding-left:58px}
+.apox .e .d:first-child{margin-top:0}
+.apox .e .d em{position:absolute;width:8px;height:8px;top:6px;*top:4px;left:30px;background-position:0 -70px}
+.apox .e .d label{float:left;width:66px;color:#333}
+.apox .e .d .h{position:absolute;width:2px;top:24px;bottom:-6px;left:33px;background-color:#eee}
+.apox .e .d.now em{background-position:-30px -70px}
+.apox .e .d.now label{color:#ff6000}
+.apox .e .d.now div{color:#666}
+.apox .e .d.now .h{display:none}
+.apox .e .loading{font-size:12px;color:#bbb;text-align:center;padding-left:22px}
+.apox .e .load{vertical-align:top;margin-right:10px}
+
+.replace .tz{font-size:14px;color:#666;cursor:pointer;margin-right:10px}
+.replace .tz em{display:inline-block;width:16px;height:16px;vertical-align:text-bottom;margin-right:5px;background-color:#fff;border:1px solid #ff9f20}
+.replace .tz.on em{background:url(//img01.51jobcdn.com/im/2016/form/form.png) -21px -122px no-repeat}
+.replace .tbox{padding-left:196px;clear:both}
+.replace .hpBox{display:inline-block;#display:inline;top:2px;#zoom:1}
+.replace .p_but{width:398px;height:38px;line-height:38px;font-size:18px}
+.replace .clear{height:0}
+
+.choice{width:500px;margin:0 auto;padding:40px 0}
+.choice strong{font-size:18px}
+.choice ul{padding:45px 0}
+.choice li{position:relative;float:left;width:210px;color:#333;margin:0 20px 10px 0;padding-left:20px}
+.choice .clear{float:none;width:100%;height:0;font-size:0;margin:0}
+.choice .default{color:#b0b0b0}
+.choice .rdo{position:absolute;top:5px;left:0}
+.choice .btnbox{text-align:center}
+
+.lmsg{position:relative;margin-bottom:20px}
+.lmsg .l_none{color:#3f3f3f;text-align:center}
+.lmsg .l_none .lchart{border-bottom:0 none}
+.lmsg .l_none .lchart .h{text-align:left}
+.lmsg .l_none img{margin-bottom:10px}
+.lmsg .l_none .a{font-size:14px}
+.lmsg .t_rt{position:absolute;top:0;right:0}
+.lmsg .t_rt .c{float:left;margin-left:10px}
+.lmsg .t_rt .btn{width:auto;line-height:28px;margin:0;padding:0 15px}
+.lmsg .t_rt .txt{width:80px}
+.lmsg .tit{margin:15px 0;padding:6px 0}
+.lmsg .tit .txt{line-height:18px;font-size:18px;color:#333;padding-left:10px;border-left:2px solid #ff6000}
+.lmsg .e{margin-top:10px;border:1px solid #eee}
+.lmsg .e .h{height:30px;line-height:30px;font-size:12px;color:#666;padding:0 20px;background-color:#fafafa}
+.lmsg .e .h em{float:left;width:55px;height:18px;line-height:18px;*line-height:19px;font-size:12px;font-style:normal;color:#fff;text-indent:3px;margin:6px 0;background-color:#ff9f20;border-radius:2px}
+.lmsg .e .h.qy em{background-color:#56b1e6}
+.lmsg .e .h span,.lmsg .e .h a,.lmsg .e .l1 span{float:left;margin-left:10px}
+.lmsg .e .h a{color:#666}
+.lmsg .e .h a:hover{color:#ff6000}
+.lmsg .e .h .cname{max-width:108px}
+.lmsg .e .h .pname{max-width:192px}
+.lmsg .e .txt{height:60px;padding:15px 10px}
+.lmsg .e.on .box{display:block}
+.lmsg .e.on .l1 em{background-position:-30px 0}
+.lmsg .e .box{display:none;margin:0 10px;padding:15px 0;border-top:1px dotted #ddd}
+.lmsg .e .box .txt{height:30px;padding:0}
+.lmsg .e .box .hit{line-height:30px;color:#999;padding-left:10px}
+.lmsg .e .box .l1 a{max-width:224px;font-size:14px}
+.lmsg .e .li{float:left;line-height:30px}
+.lmsg .e .l1{position:relative;width:390px}
+.lmsg .e .l1 p{height:30px;color:#999}
+.lmsg .e .l1 a,.lmsg .e .l1 .c_disable{float:left;max-width:288px;font-size:16px;color:#333;margin-left:10px}
+.lmsg .e .l1 a:hover{color:#ff6000}
+.lmsg .e .l1 em{position:absolute;width:14px;height:14px;cursor:pointer;top:8px;margin-left:5px;background-position:0 0}
+.lmsg .e .l1 .cy{max-width:112px}
+.lmsg .e .l1 .num{max-width:95px}
+.lmsg .e .l2{position:relative;width:130px;padding-left:30px}
+.lmsg .e .l2 .h_arr{bottom:-2px}
+.lmsg .e .l2 .h_body{width:250px;color:#666;right:-30px;top:29px;padding:10px;background-color:#fff}
+.lmsg .e .l2 .h_body .c_orange:hover{text-decoration:underline}
+.lmsg .e .l2:hover,.lmsg .e .l2:hover .h_head{z-index:6}
+.lmsg .e .l2:hover .h_arr,.lmsg .e .l2:hover .h_body{display:block}
+.lmsg .e .l2 .like,.lmsg .e .l2 .like span{background:url(//img01.51jobcdn.com/im/2017/my/icon_heart.png) 0 3px}
+.lmsg .e .l2 .like{float:left;width:104px;height:20px;margin-top:5px}
+.lmsg .e .l2 .like span{display:inline-block;height:20px;background-position:0 -17px}
+.lmsg .e .l2 .h0_5 span{width:8px}
+.lmsg .e .l2 .h1 span{width:16px}
+.lmsg .e .l2 .h1_5 span{width:30px}
+.lmsg .e .l2 .h2 span{width:38px}
+.lmsg .e .l2 .h2_5 span{width:52px}
+.lmsg .e .l2 .h3 span{width:60px}
+.lmsg .e .l2 .h3_5 span{width:74px}
+.lmsg .e .l2 .h4 span{width:82px}
+.lmsg .e .l2 .h4_5 span{width:96px}
+.lmsg .e .l2 .h5 span{width:104px}
+.lmsg .e .l2 .h0_5 .h_arr,.lmsg .e .l2 .h1 .h_arr{left:1px}
+.lmsg .e .l2 .h1_5 .h_arr,.lmsg .e .l2 .h2 .h_arr{left:23px}
+.lmsg .e .l2 .h2_5 .h_arr,.lmsg .e .l2 .h3 .h_arr{left:45px}
+.lmsg .e .l2 .h3_5 .h_arr,.lmsg .e .l2 .h4 .h_arr{left:67px}
+.lmsg .e .l2 .h4_5 .h_arr,.lmsg .e .l2 .h5 .h_arr{left:89px}
+.lmsg .e .l3{width:250px;text-align:center}
+.lmsg .lchart{height:422px;border-bottom:1px dotted #ddd}
+.lmsg .lchart:first-child .h{padding-top:0}
+.lmsg .lchart .h{font-size:16px;color:#ff6000;padding-top:30px}
+.lmsg .lchart .h strong{float:left;width:20px;height:20px;font-size:12px;font-weight:bold;color:#fff;text-align:center;margin-right:10px;background:url(//img01.51jobcdn.com/im/2017/my/icon_lnum.png) center}
+.lmsg .lchart .lct{width:100%;height:342px}
+.lmsg .tab{height:115px;padding-top:20px}
+.lmsg .tab .c{float:left;width:33%;font-size:12px;color:#999;text-align:center;border-left:1px solid #ddd}
+.lmsg .tab .c:first-child{border-left:0}
+.lmsg .tab .c a{font-size:14px;color:#333}
+.lmsg .tab .c a:hover{color:#ff6000}
+.lmsg .record{height:54px;margin:15px 0;padding:20px 0}
+.lmsg .record .lf{float:left;width:131px;text-align:center;padding:5px 0;border-right:1px solid #ddd}
+.lmsg .record .rt{float:left;width:560px;height:54px}
+.lmsg .record .rt li{float:left;width:140px;font-size:12px;color:#666;text-align:center}
+.lmsg .record .btn_y{float:right;margin-top:-20px;margin-bottom:0}
+.lmsg .loadbox{height:20px;text-indent:20px;margin-top:5px}
+.lmsg .e .l2 .h_body .loadbox{text-align:center;text-indent:0;margin-top:0}
+.lmsg .e .c_disable{color:#b0b0b0 !important}

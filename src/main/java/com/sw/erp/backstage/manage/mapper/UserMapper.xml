@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sw.erp.backstage.manage.mapper.UserMapper">
+    <select id="getUser" resultType="com.sw.erp.backstage.manage.model.User">
+        SELECT
+        U_ID as id,
+        U_ACCOUNT_NAME AS accountName,
+        U_PERSONAL_NAME AS personalName,
+        U_PASSWORD AS password,
+        U_ORGANIZATION_ID AS organizationId,
+        U_JOB_ID AS jobId,
+        U_EMAIL AS email,
+        U_IS_SUPERUSER AS isSuperuser,
+        U_SCHOOL AS school,
+        U_DEGREE AS degree,
+        U_ADDRESS AS address,
+        U_DELETE_FLAG AS deleteFlag
+        FROM
+        T_USER
+        <where>
+            <if test="accountName!=null and password!=null">
+                AND U_ACCOUNT_NAME=#{accountName}
+                and U_PASSWORD=#{password}
+            </if>
+        </where>
+
+    </select>
+</mapper>
