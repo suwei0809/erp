@@ -34,6 +34,7 @@ public class RecruitResume implements Serializable{
         this.resumeId = resumeId;
     }
 
+
     @Override
     public String toString() {
         return "RecruitResume{" +

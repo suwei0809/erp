@@ -5,4 +5,22 @@
         INSERT INTO T_RECRUIT_RESUME (RE_ID,RE_RECRUIT_ID,RE_RESUME_ID)
         VALUES (SEQ_RECRUIT_RESUME.nextval,#{recruitId},#{resumeId})
     </insert>
+    <select id="getRecruitResume" resultType="com.sw.erp.backstage.manage.model.RecruitResume">
+        SELECT
+          RE_ID AS id,
+          RE_RESUME_ID AS resumeId,
+          RE_RECRUIT_ID AS recruitId
+        FROM
+          T_RECRUIT_RESUME
+        <where>
+            <if test="id!=null">
+               AND RE_ID =#{id}
+            </if>
+        </where>
+    </select>
+    <select id="getRecruitResumeId" resultType="java.lang.Integer">
+        SELECT MAX (RE_ID) FROM T_RECRUIT_RESUME
+    </select>
+
+
 </mapper>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sw.erp.backstage.message.mapper.InterviewMapper">
+    <insert id="addInterview">
+        INSERT INTO T_INTERVIEW (I_ID,I_STATUE,I_MESSAGEID) VALUES
+        (SEQ_INTERVIEW.nextval,#{statue},#{messageId})
+    </insert>
+    <update id="editInterview">
+        UPDATE T_INTERVIEW SET
+          I_STATUE = #{statue}
+        WHERE I_ID = #{id}
+    </update>
+    <select id="getInterView" resultType="com.sw.erp.backstage.message.model.Interview">
+        SELECT
+          I_ID AS id,
+          I_STATUE AS statue,
+          I_MESSAGEID AS messageId
+        FROM T_INTERVIEW
+        WHERE 1=1
+        <if test="id !=null">
+           AND I_ID = #{id}
+        </if>
+        <if test="messageId !=null and messageId !=0">
+            AND I_MESSAGEID = #{messageId}
+        </if>
+    </select>
+</mapper>

@@ -1,7 +1,8 @@
 package com.sw.erp.tourist.controller;
 
-import com.sw.erp.backstage.manage.model.Message;
 import com.sw.erp.backstage.manage.model.RecruitResume;
+import com.sw.erp.backstage.manage.service.IRecruitResumeService;
+import com.sw.erp.backstage.message.model.Message;
 import com.sw.erp.tourist.model.Resume;
 import com.sw.erp.tourist.model.Tourist;
 import com.sw.erp.tourist.service.ITouristService;
@@ -18,7 +19,8 @@ import java.util.List;
 public class ResumeController {
     @Autowired
     private ITouristService touristService;
-
+    @Autowired
+    private IRecruitResumeService recruitResumeService;
 
 
     @RequestMapping("/resumePage")
@@ -140,11 +142,13 @@ public class ResumeController {
         RecruitResume recruitResume = (RecruitResume) request.getSession().getAttribute("addRecruitResume");
         recruitResume.setResumeId(resumeId);
         touristService.addRecruitResume(recruitResume);
+        int recruitResumeId = recruitResumeService.getRecruitResumeId();
         Message message = new Message();
         message.setStatu(1);
         message.setTouristId(0);
         message.setUserId(1);
         message.setFlag(1);
+        message.setRecruitresumeId(recruitResumeId);
         touristService.addMessage(message);
         response.getWriter().print(200);
     }

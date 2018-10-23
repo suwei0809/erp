@@ -1,4 +1,4 @@
-package com.sw.erp.backstage.manage.model;
+package com.sw.erp.backstage.message.model;
 
 import java.io.Serializable;
 
@@ -9,6 +9,7 @@ public class Message implements Serializable{
     private Integer touristId;
     private Integer userId;
     private Integer flag;
+    private Integer recruitresumeId;
 
     public Message() {
     }
@@ -61,6 +62,14 @@ public class Message implements Serializable{
         this.flag = flag;
     }
 
+    public Integer getRecruitresumeId() {
+        return recruitresumeId;
+    }
+
+    public void setRecruitresumeId(Integer recruitresumeId) {
+        this.recruitresumeId = recruitresumeId;
+    }
+
     @Override
     public String toString() {
         return "Message{" +
@@ -70,6 +79,7 @@ public class Message implements Serializable{
                 ", touristId=" + touristId +
                 ", userId=" + userId +
                 ", flag=" + flag +
+                ", recruitresumeId=" + recruitresumeId +
                 '}';
     }
 }

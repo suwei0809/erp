@@ -1,9 +1,9 @@
 package com.sw.erp.tourist.service;
 
-import com.sw.erp.backstage.manage.mapper.MessageMapper;
 import com.sw.erp.backstage.manage.mapper.RecruitResumeMapper;
-import com.sw.erp.backstage.manage.model.Message;
 import com.sw.erp.backstage.manage.model.RecruitResume;
+import com.sw.erp.backstage.message.mapper.MessageMapper;
+import com.sw.erp.backstage.message.model.Message;
 import com.sw.erp.tourist.mapper.ResumeMapper;
 import com.sw.erp.tourist.mapper.TouristMapper;
 import com.sw.erp.tourist.model.Resume;
@@ -74,7 +74,7 @@ public class TouristService implements ITouristService{
 
     @Override
     public List<Message> getMessage(Message message) {
-        return messageMapper.getMessage(message);
+        return messageMapper.getMessages(message);
     }
 
     @Override

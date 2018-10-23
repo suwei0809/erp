@@ -1,21 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sw.erp.backstage.manage.mapper.MessageMapper">
+<mapper namespace="com.sw.erp.backstage.message.mapper.MessageMapper">
     <insert id="addMessage">
-        INSERT INTO T_MESSGAE (M_ID, M_MESSAGE, M_STATU, M_TOURIST_ID, M_USER_ID,M_FLAG)
-        VALUES (SEQ_MESSGAE.nextval,#{message},#{statu},#{touristId},#{userId},#{flag})
+        INSERT INTO T_MESSGAE (M_ID, M_MESSAGE, M_STATU, M_TOURIST_ID, M_USER_ID,M_FLAG,M_RECRUITRESUME_ID)
+        VALUES (SEQ_MESSGAE.nextval,#{message},#{statu},#{touristId},#{userId},#{flag},#{recruitresumeId})
     </insert>
-    <select id="getMessage" resultType="com.sw.erp.backstage.manage.model.Message">
+    <update id="editMessage">
+         UPDATE T_MESSGAE
+        SET M_FLAG = #{flag}
+        WHERE M_ID = #{id}
+    </update>
+    <select id="getMessages" resultType="com.sw.erp.backstage.manage.model.Message">
         SELECT
         M_ID AS id,
         M_MESSAGE AS message,
         M_STATU AS statu,
         M_TOURIST_ID AS touristId,
         M_USER_ID AS userId,
-        M_FLAG AS flag
+        M_FLAG AS flag,
+        M_RECRUITRESUME_ID AS recruitresumeId
         FROM
         T_MESSGAE
         WHERE 1=1
+        <if test="id!=null">
+            and M_ID =#{id}
+        </if>
         <if test="statu!=null">
             AND M_STATU =#{statu}
         </if>
@@ -25,6 +34,5 @@
         <if test="userId!=null">
             and M_USER_ID = #{userId}
         </if>
-
     </select>
 </mapper>

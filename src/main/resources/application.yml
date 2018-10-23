@@ -11,8 +11,8 @@ spring:
       prefix: /WEB-INF/pages/
       suffix: .jsp
 mybatis:
-  mapper-locations: classpath*:com/sw/erp/tourist/mapper/*.xml
-  type-aliases-package: com.sw.erp.tourist.model
+  mapper-locations: classpath*:com/sw/erp/*/mapper/*.xml
+  type-aliases-package: com.sw.erp.*.model
 
 # 打印sql
 logging:

@@ -1,7 +1,7 @@
 package com.sw.erp.tourist.service;
 
-import com.sw.erp.backstage.manage.model.Message;
 import com.sw.erp.backstage.manage.model.RecruitResume;
+import com.sw.erp.backstage.message.model.Message;
 import com.sw.erp.tourist.model.Resume;
 import com.sw.erp.tourist.model.Tourist;
 

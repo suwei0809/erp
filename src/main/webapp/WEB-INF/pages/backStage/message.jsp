@@ -55,15 +55,6 @@
                     $(this).next('.menuson').slideDown();
                 }
             });
-
-            $("#look").click(function () {
-                $.ajax({
-                    type:"post",
-                    url:"lookMessage",
-
-                })
-            })
-
         })
     </script>
 </head>
@@ -102,7 +93,7 @@
                     <c:if test="${message.flag == 2}">
                         <td>已读</td>
                     </c:if>
-                <td><a href="" id="look" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
+                <td><a href="lookMessage?id=${message.id}" id="look" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
             </tr>
         </c:forEach>
         </tbody>
