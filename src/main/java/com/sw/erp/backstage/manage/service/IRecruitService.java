@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface IRecruitService {
     List<Recruit> getRecruit(Recruit recruit);
+    Recruit getRecruitById(Recruit recruit);
+
 }

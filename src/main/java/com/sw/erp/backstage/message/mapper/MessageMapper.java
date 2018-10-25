@@ -11,4 +11,6 @@ public interface MessageMapper {
     List<Message> getMessages(Message message);
 
     boolean editMessage(Message message);
+
+    Integer getMessageMaxId();
 }

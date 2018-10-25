@@ -1,5 +1,7 @@
 package com.sw.erp.tourist.controller;
 
+import com.sw.erp.backstage.message.model.Message;
+import com.sw.erp.backstage.message.service.IMessageService;
 import com.sw.erp.tourist.model.Resume;
 import com.sw.erp.tourist.model.Tourist;
 import com.sw.erp.tourist.service.ITouristService;
@@ -27,8 +29,11 @@ public class TouristController {
     @Autowired
     private ITouristService touristService;
 
+    @Autowired
+    private IMessageService messageService;
+
     @RequestMapping("/homePage")
-    public String homePage(HttpServletRequest request, HttpServletResponse response){
+    public String homePage(HttpServletRequest request, HttpServletResponse response) {
 //        HttpSession session = request.getSession();
 //        Tourist tourist = new Tourist();
 //        tourist.setTouristId(1);
@@ -39,60 +44,78 @@ public class TouristController {
     }
 
     @RequestMapping("/registerPage")
-    public String registerPage(HttpServletRequest request, HttpServletResponse response)throws Exception{
+    public String registerPage(HttpServletRequest request, HttpServletResponse response) throws Exception {
         return "tourist/register";
     }
 
     /**
      * 游客注册
+     *
      * @param request
      * @param response
      * @throws Exception
      */
     @RequestMapping("/addTourist")
-    public void addTourist(HttpServletRequest request, HttpServletResponse response)throws Exception{
+    public void addTourist(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String name = request.getParameter("name");
         String pass = request.getParameter("password");
-        Tourist tourist = new Tourist(name,pass);
+        Tourist tourist = new Tourist(name, pass);
         touristService.addTourist(tourist);
         response.getWriter().print(200);
     }
+
     @RequestMapping("/loginPage")
-    public String loginPage(HttpServletRequest request, HttpServletResponse response)throws Exception{
-     return "tourist/login";
+    public String loginPage(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        return "tourist/login";
     }
 
     /**
      * 登陆
+     *
      * @param request
      * @param response
      * @throws Exception
      */
     @RequestMapping("/login")
-    public void login(HttpServletRequest request, HttpServletResponse response)throws Exception{
+    public void login(HttpServletRequest request, HttpServletResponse response) throws Exception {
         String name = request.getParameter("name");
-            String pass = request.getParameter("password");
-        Tourist tourist = new Tourist(name,pass);
+        String pass = request.getParameter("password");
+        Tourist tourist = new Tourist(name, pass);
         Tourist newTourist = touristService.getTourist(tourist);
-        if (newTourist!=null&&newTourist.getTouristId()!=0){
+        if (newTourist != null && newTourist.getTouristId() != 0) {
             HttpSession session = request.getSession();
-            session.setAttribute("tourist",newTourist);
+            session.setAttribute("tourist", newTourist);
             response.getWriter().print(200);
-        }else {
+        } else {
             response.getWriter().print(202);
         }
     }
 
     @RequestMapping("/checkLogin")
-    public void checkLogin(HttpServletRequest request, HttpServletResponse response)throws Exception{
-          Tourist tourist = (Tourist) request.getSession().getAttribute("tourist");
-          if (tourist!=null){
-              response.getWriter().print(200);
-          } else {
-              response.getWriter().print(202);
-          }
+    public void checkLogin(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        Tourist tourist = (Tourist) request.getSession().getAttribute("tourist");
+        if (tourist != null) {
+            response.getWriter().print(200);
+        } else {
+            response.getWriter().print(202);
+        }
     }
 
+    /**
+     * 消息列表
+     */
+    @RequestMapping("/touristMessagePage")
+    public String touristMessagePage(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        Tourist tourist = (Tourist) request.getSession().getAttribute("tourist");
+        if (tourist==null){
+            return "tourist/login";
+        }
+        Message message = new Message();
+        message.setTouristId(tourist.getTouristId());
+        List<Message> newMessage = messageService.getMessage(message);
+        request.getSession().setAttribute("touristMessage",newMessage);
+        return "tourist/message";
+    }
 
 
 }

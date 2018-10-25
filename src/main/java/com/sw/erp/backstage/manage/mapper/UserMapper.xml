@@ -23,6 +23,5 @@
                 and U_PASSWORD=#{password}
             </if>
         </where>
-
     </select>
 </mapper>

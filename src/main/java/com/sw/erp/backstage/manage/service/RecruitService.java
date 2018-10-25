@@ -16,4 +16,13 @@ public class RecruitService implements IRecruitService{
     public List<Recruit> getRecruit(Recruit recruit) {
         return recruitMapper.getRecruit(recruit);
     }
+
+    @Override
+    public Recruit getRecruitById(Recruit recruit) {
+        List<Recruit> recruits = recruitMapper.getRecruit(recruit);
+        if (recruits!=null||recruits.size()>0){
+            return recruits.get(0);
+        }
+        return null;
+    }
 }

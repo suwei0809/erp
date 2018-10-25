@@ -132,8 +132,8 @@ h2{font-weight:normal;}
 .place span{line-height:40px; font-weight:bold;float:left; margin-left:12px;position: absolute;top:88px;left: 187px}
 .placeul li{float:left; line-height:40px; padding-left:7px; padding-right:12px; background:url(../images/rlist.gif) no-repeat right;position: absolute;top:88px;left: 230px}
 .placeul li:last-child{background:none;}
-.rightinfo{padding:8px;margin-left: 180px}
-.tools{clear:both; height:35px; margin-bottom:8px;}
+.rightinfo{padding:8px;margin-left: 180px;margin-bottom: 30px}
+.tools{clear:both; height:35px; margin-bottom:8px; margin-top:85px}
 .toolbar{float:left;}
 .toolbar li{background:url(../images/toolbg.gif) repeat-x; line-height:33px; height:33px; border:solid 1px #d3dbde; float:left; padding-right:10px; margin-right:5px;border-radius: 3px; behavior:url(../js/pie.htc); cursor:pointer;}
 .toolbar li span{float:left; margin-left:10px; margin-right:5px; margin-top:5px;}

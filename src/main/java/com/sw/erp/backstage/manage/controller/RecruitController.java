@@ -6,12 +6,12 @@ import com.sw.erp.backstage.manage.model.User;
 import com.sw.erp.backstage.manage.service.IRecruitResumeService;
 import com.sw.erp.backstage.manage.service.IRecruitService;
 import com.sw.erp.backstage.manage.service.IUserService;
+import com.sw.erp.backstage.message.model.Interview;
 import com.sw.erp.backstage.message.model.Message;
 import com.sw.erp.backstage.message.service.IMessageService;
 import com.sw.erp.tourist.model.Resume;
 import com.sw.erp.tourist.service.ITouristService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,6 +33,7 @@ public class RecruitController {
     private IRecruitResumeService recruitResumeService;
     @Autowired
     private ITouristService touristService;
+
 
     /**
      * 请求登录  后台
@@ -113,9 +114,16 @@ public class RecruitController {
     @RequestMapping("/messagePage")
     public String messagePage(HttpServletRequest request, HttpServletResponse response) throws Exception {
         User user = (User) request.getSession().getAttribute("user");
+        if (user==null){
+            return "backStage/login";
+        }
         Message message = new Message();
         message.setUserId(user.getId());
         List<Message> messageList = messageService.getMessage(message);
+        Interview interview = new Interview();
+        interview.setStatue(1);
+        List<Interview> interviewList = messageService.getInterView(interview);
+        request.getSession().setAttribute("interviews", interviewList);
         request.getSession().setAttribute("messages", messageList);
         if (user == null) {
             return "backStage/login";

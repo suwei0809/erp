@@ -34,7 +34,7 @@
     </ul>
     <ul class="mt_r">
         <li>
-            <a class="r a" track-type="trackButtonClick" event-type="5" target="_blank" href="//i.51job.com/resume/cvletter.php?lang=c">查看求职信</a>
+            <a class="r a" track-type="trackButtonClick" event-type="5" target="_blank" href="touristMessagePage">消息中心</a>
         </li>
 
         <li>
@@ -49,11 +49,8 @@
             <li class="l3">操作</li>
         </ul>
     </div>
-
     <div id="resume_82244630" class="rli" special-type="">
-
     </div>
-
 </div>
 </body>
 <script src="/js/jquery-3.2.1.js"></script>

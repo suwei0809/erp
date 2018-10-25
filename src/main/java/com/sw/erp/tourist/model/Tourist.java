@@ -42,4 +42,13 @@ public class Tourist implements Serializable {
     public void setTouristPass(String touristPass) {
         this.touristPass = touristPass;
     }
+
+    @Override
+    public String toString() {
+        return "Tourist{" +
+                "touristId=" + touristId +
+                ", touristName='" + touristName + '\'' +
+                ", touristPass='" + touristPass + '\'' +
+                '}';
+    }
 }

@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.sw.erp.backstage.message.mapper.InterviewMapper">
     <insert id="addInterview">
-        INSERT INTO T_INTERVIEW (I_ID,I_STATUE,I_MESSAGEID) VALUES
-        (SEQ_INTERVIEW.nextval,#{statue},#{messageId})
+        INSERT INTO T_INTERVIEW (I_ID,I_STATUE,I_MESSAGEID,I_DATE,I_PLACE) VALUES
+        (SEQ_INTERVIEW.nextval,#{statue},#{messageId},#{idate},#{place})
     </insert>
     <update id="editInterview">
         UPDATE T_INTERVIEW SET
@@ -14,7 +14,9 @@
         SELECT
           I_ID AS id,
           I_STATUE AS statue,
-          I_MESSAGEID AS messageId
+          I_MESSAGEID AS messageId,
+          I_DATE AS idate,
+          I_PLACE AS place
         FROM T_INTERVIEW
         WHERE 1=1
         <if test="id !=null">
@@ -22,6 +24,9 @@
         </if>
         <if test="messageId !=null and messageId !=0">
             AND I_MESSAGEID = #{messageId}
+        </if>
+        <if test="statue !=null and statue !=0">
+            AND I_STATUE = #{statue}
         </if>
     </select>
 </mapper>

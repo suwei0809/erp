@@ -93,8 +93,13 @@
                     <c:if test="${message.flag == 2}">
                         <td>已读</td>
                     </c:if>
-                <td><a href="lookMessage?id=${message.id}" id="look" class="tablelink">查看</a>     <a href="#" class="tablelink"> 删除</a></td>
+                <td><a href="lookMessage?id=${message.id}" id="look" class="tablelink">查看</a>
+                <c:forEach items="${sessionScope.interviews}" var="interview">
+                    <c:if test="${interview.messageId==message.id}">
+                            <a href="javascript:;" class="tablelink"> 录用</a></td>
+                    </c:if>
             </tr>
+                 </c:forEach>
         </c:forEach>
         </tbody>
     </table>

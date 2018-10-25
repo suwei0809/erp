@@ -50,28 +50,42 @@
                 }
             });
 
+//            弹框设置
+            $("#sub").click(function(){
+                $(".tip").fadeIn(200);
+            });
+            $(".tiptop a").click(function(){
+                $(".tip").fadeOut(200);
+            });
 
-            $("#sub").click(function () {
+            $(".sure").click(function(){
                 $.ajax({
                     type:"post",
-                    url:"",
+                    url:"sendInterviewMessage",
                     data:{
                         "resumeId":${requestScope.recruitResume.resumeId},
-                        "messageId": ${requestScope.message.id}
+                        "messageId": ${requestScope.message.id},
+                        "idate":$("#idate").val(),
+                        "place":$("#place").val()
                     },
                     success:function (data) {
                         if (data==200){
-                            alert("面试通知已发送！！")
+                            alert("面试通知发送成功！")
                         }else {
                             alert("您已经发送过了！")
                         }
                     }
-                })
-            })
+                }),
+                    $(".tip").fadeOut(100);
+                    location.reload()
+            });
+            $(".cancel").click(function(){
+                $(".tip").fadeOut(100);
+            });
+            $("#no").click(function(){
+                location.href = "lookMessage"
+            });
 
-            $("#no").click(function () {
-                location.href ="messagePage"
-            })
         })
     </script>
 </head>
@@ -87,67 +101,123 @@
 </div>
 <div class="index">
     <div class="rightinfo">
-<form id="table">
-    <table border="1px" cellspacing="1" cellpadding="10">
-        <tr>
-            <td height="76px" width="104" >姓名</td>
-            <td width="94" height="77" id="name">${sessionScope.resumeId.name}</td>
-            <td height="76px" width="104">性别</td>
-            <td width="94" height="77" id="sex">${sessionScope.resumeId.reSex}</td>
-            <td height="76px" width="104">出生年月</td>
-            <td width="94" height="77" id="birth">${sessionScope.resumeId.birth}</td>
-            <td rowspan="4" width="145" height="315"><input type="file"/></td>
-        </tr>
-        <tr>
-            <td height="76px" width="104">籍贯</td>
-            <td  id="hometown">${sessionScope.resumeId.hometown}</td>
-            <td height="76px" width="104">民族</td>
-            <td   id="nation">${sessionScope.resumeId.nation}</td>
-            <td height="76px" width="104">政治面貌</td>
-            <td id="polity">${sessionScope.resumeId.polity}</td>
-        </tr>
-        <tr>
-            <td height="76px" width="104">学历</td>
-            <td  id="education">${sessionScope.resumeId.education}</td>
-            <td height="76px" width="104">身高</td>
-            <td  id="height">${sessionScope.resumeId.height}</td>
-            <td height="76px" width="104">体重</td>
-            <td  id="weight">${sessionScope.resumeId.weight}</td>
-        </tr>
-        <tr>
-            <td height="76px" width="104">专业</td>
-            <td colspan="3" id="major">${sessionScope.resumeId.major}</td>
-            <td height="76px" width="104">婚否</td>
-            <td id="marry">${sessionScope.resumeId.marry}</td>
-        </tr>
-        <tr>
-            <td height="76px" width="104">毕业院校</td>
-            <td colspan="3" id="school">${sessionScope.resumeId.school}</td>
-            <td height="76px" width="104">邮箱</td>
-            <td colspan=" 3" id="email">${sessionScope.resumeId.email}</td>
-        </tr>
-        <tr>
-            <td height="76px" width="104">联系电话</td>
-            <td colspan="3" id="phone">${sessionScope.resumeId.phone}</td>
-            <td height="76px" width="104">现住地址</td>
-            <td colspan="3" id="addr">${sessionScope.resumeId.addr}</td>
-        </tr>
-        <tr>
-            <td height="439" width="104">个人履历</td>
-            <td colspan="6" valign="top" id="perresume">${sessionScope.resumeId.perresume}</td>
-        </tr>
+        <div class="tools">
+            <ul class="toolbar">
+                <li class="click" id="sub"><span><img src="images/t01.png" /></span>邀请面试</li>
+                <li class="click" id="no"><span><img src="images/t02.png" /></span>修改</li>
+            </ul>
+        </div>
+        <div class="resume" style="border: 1px black solid; height: 608px;">
+        <ul class="classlist">
+            <ul>
+                <li>
+                    <span height="76px" width="104">姓名</span>
+                    <span width="94" height="77" id="name">${sessionScope.resumeId.name}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">性别</span>
+                    <span width="94" height="77" id="sex">${sessionScope.resumeId.reSex}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">出生年月</span>
+                    <span width="94" height="77" id="birth">${sessionScope.resumeId.birth}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="76px" width="104">籍贯</span>
+                    <span id="hometown">${sessionScope.resumeId.hometown}</span>
+                </li>
 
-        <tr>
-            <td height="76" width="104">自我评价</td>
-            <td colspan="6" id="sel">${sessionScope.resumeId.sel}</td>
-        </tr>
-    </table>
-    <div>
-        <input type="button" id="sub" value="邀请面试"/>
-        <input type="button" id="no" value="返回">
+                <li>
+                    <span height="76px" width="104">民族</span>
+                    <span id="nation">${sessionScope.resumeId.nation}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">政治面貌</span>
+                    <span id="polity">${sessionScope.resumeId.polity}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="76px" width="104">学历</span>
+                    <span id="education">${sessionScope.resumeId.education}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">身高</span>
+                    <span id="height">${sessionScope.resumeId.height}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">体重</span>
+                    <span id="weight">${sessionScope.resumeId.weight}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="76px" width="104">专业</span>
+                    <span colspan="3" id="major">${sessionScope.resumeId.major}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">婚否</span>
+                    <span id="marry">${sessionScope.resumeId.marry}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">毕业院校</span>
+                    <span colspan="3" id="school">${sessionScope.resumeId.school}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="76px" width="104">邮箱</span>
+                    <span colspan=" 3" id="email">${sessionScope.resumeId.email}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">联系电话</span>
+                    <span colspan="3" id="phone">${sessionScope.resumeId.phone}</span>
+                </li>
+                <li>
+                    <span height="76px" width="104">现住地址</span>
+                    <span colspan="3" id="addr">${sessionScope.resumeId.addr}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="439" width="104">个人履历</span>
+                    <span colspan="6" valign="top" id="perresume">${sessionScope.resumeId.perresume}</span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <span height="76" width="104">自我评价</span>
+                    <span colspan="6" id="sel">${sessionScope.resumeId.sel}</span>
+                </li>
+            </ul>
+        </ul>
+        </div>
+        </div>
+
+    <div class="tip">
+        <div class="tiptop"><span>提示信息</span><a></a></div>
+        <div class="tipinfo">
+            <span><img src="images/ticon.png" /></span>
+            <div class="tipright">
+                <div style="    " >
+                    面试地点:<input type="text" style="height: 20px;width: 180px;border:0.5px solid #378888;font-size:12px" id="place" value="">
+                </div>
+                <div style="margin-top: 10px">
+                    面试时间:<input type="text" style="height: 20px;width: 180px;border:0.5px solid #378888;font-size:12px" id="idate" value="">
+                </div>
+            </div>
+        </div>
+        <div class="tipbtn">
+            <input name="" type="button"  class="sure" value="确定" />&nbsp;
+            <input name="" type="button"  class="cancel" value="取消" />
+        </div>
     </div>
-</form>
     </div>
+
 </div>
+
+
 </body>
 </html>

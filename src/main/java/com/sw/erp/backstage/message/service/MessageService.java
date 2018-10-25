@@ -20,7 +20,9 @@ public class MessageService implements IMessageService {
 
     @Override
     public boolean addMessage(Message message) {
-        return false;
+        String mess = "收到新的面试邀请，请注意查收！";
+        message.setMessage(mess);
+        return messageMapper.addMessage(message);
     }
 
     @Override
@@ -55,6 +57,8 @@ public class MessageService implements IMessageService {
 
     @Override
     public boolean addInterview(Interview interview) {
+
+
         return interviewMapper.addInterview(interview);
     }
 
@@ -70,5 +74,10 @@ public class MessageService implements IMessageService {
             return interviewList.get(0);
         }
         return null;
+    }
+
+    @Override
+    public Integer getMessageMaxId() {
+        return messageMapper.getMessageMaxId();
     }
 }

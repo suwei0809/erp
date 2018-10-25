@@ -10,7 +10,7 @@
         SET M_FLAG = #{flag}
         WHERE M_ID = #{id}
     </update>
-    <select id="getMessages" resultType="com.sw.erp.backstage.manage.model.Message">
+    <select id="getMessages" resultType="com.sw.erp.backstage.message.model.Message">
         SELECT
         M_ID AS id,
         M_MESSAGE AS message,
@@ -34,5 +34,8 @@
         <if test="userId!=null">
             and M_USER_ID = #{userId}
         </if>
+    </select>
+    <select id="getMessageMaxId" resultType="java.lang.Integer">
+        SELECT max(M_ID) FROM T_MESSGAE
     </select>
 </mapper>
